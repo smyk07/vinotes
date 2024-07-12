@@ -17,4 +17,5 @@ export PATH=${NEW_PATH}
 deactivate() {
   export PATH=${OLD_PATH}
   export PS1=${OLD_PS1}
+  echo "Bye..."
 }
