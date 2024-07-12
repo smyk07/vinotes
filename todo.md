@@ -1,0 +1,7 @@
+- [x] Setup virtualenv activate script
+- [ ] Setup vinote commands 
+  - [ ] help
+  - [ ] other functionality commands 
+    - [ ] open vault 
+    - [ ] open / create daily 
+    - [ ] backup vault 
