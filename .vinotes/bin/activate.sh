@@ -6,7 +6,7 @@ NEW_PS1="(vinotes) ${PS1}"
 export PS1=${NEW_PS1}
 
 # handling path
-export VIRTUAL_ENV="/mnt/e/coding-projects/vinotes/.vinotes/"
+export VIRTUAL_ENV="$PWD/.vinotes/"
 OLD_PATH="$PATH"
 NEW_PATH="$VIRTUAL_ENV/bin:$PATH"
 
