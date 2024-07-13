@@ -1,4 +1,4 @@
-# How this todo will work
+# 0. How this todo will work
 
 - There will be a branch for each feature (`todo1.1`, `todo1.2`, etc.)
 - These feature branches will merge into main when the feature implementation is complete (as this is a small project for now)
@@ -6,7 +6,7 @@
 (upon release of the first production version, `dev` will split off `main`, which will then act as the parent for all feature branches.)
 _First production version will be released at the completion of 2.3 and 2.5._
 
-# 1 Internal Functionality
+# 1. Internal Functionality
 - [x] 1.1 Setup virtualenv activate script - `.vinotes/bin/activate.sh`
 
 - [x] 1.2 Setup templating system for file creation (other than daily) - `.vinotes/utils/create_note.py`
@@ -17,7 +17,7 @@ _First production version will be released at the completion of 2.3 and 2.5._
   - [ ] detect templates automatically
   - [ ] if directory does not exist, ask weather to create or exit from user (every time create_note runs)
 
-# 2 Commands
+# 2. Commands
 - [x] 2.1 help - `.vinotes/bin/help.sh`
 
 - [x] 2.2 open vault - `.vinotes/bin/openvault.sh`
@@ -34,3 +34,11 @@ _First production version will be released at the completion of 2.3 and 2.5._
   - [x] testing
 
 - [ ] 2.5 backup vault 
+
+# 3. Releases
+- [ ] v1.0 - First Prodiction Release
+  - [ ] test for errors & bugs
+  - [ ] update `.vinotes/bin/help.sh`
+  - [ ] create setup script (either in bash or python)
+  - [ ] update `README.md` (usage, docs, credits)
+  - [ ] PUSH & PUBLISH RELEASE!
