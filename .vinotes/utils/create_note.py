@@ -48,6 +48,5 @@ if (file) in files:
 else: 
     note_path = Path(f"./{dir}/{file}.md")
     with note_path.open("w") as note:
-        sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'templates')))
-        from manager import content
-        note.write(content(dir, file))
+        from template_manager import get_template
+        note.write(get_template(dir, file))
