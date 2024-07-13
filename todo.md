@@ -6,6 +6,8 @@
   - [x] apply template content `.vinotes/templates/manager.py` and `.vinotes/utils/create_note.py`
 
 - [ ] Custom template creation system
+  - [ ] detect templates automatically
+  - [ ] if directory does not exist, ask weather to create or exit from user (every time create_note runs)
 
 # Vinote Commands
 - [x] help - `.vinotes/bin/help.sh`
