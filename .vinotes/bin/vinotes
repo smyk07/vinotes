@@ -1,11 +1,14 @@
 # Do not touch the below code unless you are really confident
 case $1 in
-open-daily | od)
-  # execute daily note creation and opening python script
-  ;;
 open)
   # execute vault opening python script
   command $PWD/.vinotes/bin/openvault.sh
+  ;;
+create-file | cf)
+  command $PWD/.vinotes/utils/create_note.py "${@}"
+  ;;
+open-daily | od)
+  # execute daily note creation and opening python script
   ;;
 backup)
   # execute git backup script
