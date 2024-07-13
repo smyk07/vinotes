@@ -3,6 +3,9 @@
 - There will be a branch for each feature (`todo1.1`, `todo1.2`, etc.)
 - These feature branches will merge into main when the feature implementation is complete (as this is a small project for now)
 
+(upon release of the first production version, `dev` will split off `main`, which will then act as the parent for all feature branches.)
+_First production version will be released at the completion of 2.3 and 2.5._
+
 # 1 Internal Functionality
 - [x] 1.1 Setup virtualenv activate script - `.vinotes/bin/activate.sh`
 
