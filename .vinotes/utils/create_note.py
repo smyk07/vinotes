@@ -35,7 +35,7 @@ elif len(args) < 4:
 
 # create dir and file variables
 dir = args[2]
-file = f"{args[3]}.md"
+file = args[3]
 
 # check for files in specified folder
 files = os.listdir(f"./{dir}/")
@@ -44,8 +44,10 @@ files = os.listdir(f"./{dir}/")
 # else - create file, apply template.
 if (file) in files: 
     print()
-    print(f"{file} exists in {dir}")
+    print(f"{file}.md exists in {dir}")
 else: 
-    note_path = Path(f"./{dir}/{file}")
+    note_path = Path(f"./{dir}/{file}.md")
     with note_path.open("w") as note:
-        note.write("Created using Vinotes...")
+        sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'templates')))
+        from manager import content
+        note.write(content(dir, file))
