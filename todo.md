@@ -1,3 +1,9 @@
+# How this todo will work
+
+- There will be a branch for each todo (`todo1.1`, `todo1.2`, etc.)
+- These branches will stem off the `dev` branch.
+- The dev branch will merge into `version` branches, which will be merged into `main` for each tag.
+
 # 1 Internal Functionality
 - [x] 1.1 Setup virtualenv activate script - `.vinotes/bin/activate.sh`
 
