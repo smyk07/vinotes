@@ -4,7 +4,7 @@ open)
   # execute vault opening python script
   command $PWD/.vinotes/bin/openvault.sh
   ;;
-create-file | cf)
+create-note | cn)
   command $PWD/.vinotes/utils/create_note.py "${@}"
   ;;
 open-daily | od)
