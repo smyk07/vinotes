@@ -1,9 +1,7 @@
 # How this todo will work
 
-- There will be a branch for each todo (`todo1.1`, `todo1.2`, etc.)
-- These branches will stem off the `dev` branch.
-- The dev branch will merge into `version` branches, where minor bug fixes will take place.
-- And then finally each `version` branch will merge into the `main` branch for each tag.
+- There will be a branch for each feature (`todo1.1`, `todo1.2`, etc.)
+- These feature branches will merge into main when the feature implementation is complete (as this is a small project for now)
 
 # 1 Internal Functionality
 - [x] 1.1 Setup virtualenv activate script - `.vinotes/bin/activate.sh`
