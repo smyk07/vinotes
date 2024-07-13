@@ -23,9 +23,11 @@
   - [ ] ignore daily directory option in `create_note.py`
   - [ ] file creation and apply template content
 
-- [ ] 2.4 create zettelkasten notes in `create_note.py`
+- [x] 2.4 create zettelkasten notes in `create_note.py`
   - [x] fleeting notes - on the fly, raw data
-  - [ ] literature notes - from books, articles, web, distill the quotes and information 
-  - [ ] permanent notes - interpret the above two into a single idea in our own words
+  - [x] literature notes - from books, articles, web, distill the quotes and information 
+  - [x] permanent notes - interpret the above two into a single idea in our own words
+  - [x] update `template_manager.py`
+  - [x] testing
 
 - [ ] 2.5 backup vault 
