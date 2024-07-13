@@ -8,11 +8,17 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..',
 
 # import templates
 # from <filename> import <func> as <func_name_here>
+
+# default zettelkasten templates
 from fleeting import content as fleeting
+from literature import content as literature
+from permanent import content as permanent
 
 # funcs dictionary
 funcs = {
-    "fleeting": fleeting
+    "fleeting": fleeting, 
+    "literature": literature, 
+    "permanent": permanent
 }
 
 # get timestamp
