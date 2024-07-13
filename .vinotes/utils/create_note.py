@@ -38,11 +38,11 @@ dir = args[2]
 file = args[3]
 
 # check for files in specified folder
-files = os.listdir(f"./{dir}/")
+files = os.listdir(f"{dir}/")
 
 # if - file exists, do not create and quit.
 # else - create file, apply template.
-if (file) in files: 
+if (f"{file}.md") in files: 
     print()
     print(f"{file}.md exists in {dir}")
 else: 

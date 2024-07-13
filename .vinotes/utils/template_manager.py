@@ -1,5 +1,10 @@
+# import modules
+import os
+import sys
+import datetime
+
 # inserting to path
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'templates'))) from fleeting import content as fleeting
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'templates')))
 
 # import templates
 # from <filename> import <func> as <func_name_here>
@@ -11,7 +16,6 @@ funcs = {
 }
 
 # get timestamp
-import datetime
 ct = datetime.datetime.now()
 timestamp = f"{ct.year}-{ct.month}-{ct.day} {ct.hour}:{ct.minute}"
 
