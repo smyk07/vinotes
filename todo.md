@@ -5,7 +5,7 @@
   - [x] file creation
   - [x] apply template content `.vinotes/templates/manager.py` and `.vinotes/utils/create_note.py`
 
-- [ ] Custom template creation system
+- [ ] Custom template creation / detection system
   - [ ] detect templates automatically
   - [ ] if directory does not exist, ask weather to create or exit from user (every time create_note runs)
 
