@@ -1,11 +1,13 @@
-- [x] Setup virtualenv activate script
+- [x] Setup virtualenv activate script - `.vinotes/bin/activate.sh`
 
-- [ ] Setup templating system for file creation
+- [ ] Setup templating system for file creation (other than daily) - `.vinotes/utils/create_note.py`
+  - [x] file creation
+  - [ ] apply template content
 
 - [ ] Setup vinote commands 
-  - [x] help
+  - [x] help - `.vinotes/bin/help.sh`
   - [ ] other functionality commands 
-    - [x] open vault 
+    - [x] open vault - `.vinotes/bin/openvault.sh`
     - [ ] open / create daily 
     - [ ] zettelkasten functionality
       - [ ] fleeting notes - on the fly, raw data
