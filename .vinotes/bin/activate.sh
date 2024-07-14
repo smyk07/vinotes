@@ -25,6 +25,9 @@ cd() {
   command echo ""
 }
 
+# alias vinotes function to vn
+alias vn=vinotes
+
 # deactivate function
 deactivate() {
   export PS1=${OLD_PS1}
