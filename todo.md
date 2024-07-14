@@ -27,6 +27,7 @@ _First production version will be released at the completion of 1.4, 1.5, 2.2, 2
 - [ ] 1.5 Setup Directory Creation in `.vinotes/utils/create_note.py` (make it so that anyone can make a file like `./literature/books/Metamorphosis Franz Kafka.md`)
   - [ ] Revamp the whole file creation system in `.vinotes/utils/create_note.py` - keep it only as a file creation command by default for now
   - [ ] Add -t flag to tell it to apply a template of the directory name (literature, fleeting, permanent, etc.) - `config.md` opportunity to make -t default
+  - [ ] ship zettelkasten as an optional feature. allow user to create md files anywhere.
 
 # 2. Commands
 - [x] 2.1 help - `.vinotes/bin/help.sh`
