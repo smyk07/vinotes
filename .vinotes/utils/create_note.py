@@ -10,6 +10,9 @@ import os
 import sys
 from pathlib import Path
 
+# import templates
+from template_manager import get_template
+
 # assignment of arguments to variable
 args = sys.argv
 
@@ -55,5 +58,4 @@ if (f"{file}.md") in files:
 else: 
     note_path = Path(f"./{dir}/{file}.md")
     with note_path.open("w") as note:
-        from template_manager import get_template
         note.write(get_template(dir, file))

@@ -6,6 +6,9 @@ import os
 import sys
 import datetime
 
+# import config
+from config_manager import get_config
+
 # inserting to path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'templates')))
 
@@ -28,7 +31,7 @@ funcs = {
 
 # get timestamp
 ct = datetime.datetime.now()
-timestamp = f"{ct.year}-{ct.month}-{ct.day} {ct.hour}:{ct.minute}"
+timestamp = ct.strftime(get_config("timestamp_format"))
 
 # manage templating
 def get_template(func, filename):

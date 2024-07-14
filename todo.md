@@ -18,7 +18,11 @@ _First production version will be released at the completion of 1.4, 2.3, and 2.
   - [ ] detect templates automatically
   - [ ] if directory does not exist, ask weather to create or exit from user (every time create_note runs)
 
-- [ ] 1.4 Configuration for multiple factors `.vinotes/config.json`
+- [x] 1.4 Setup Configuration `.vinotes/config.json`
+  - [x] setup `.vinotes/utils/config-manager.py`
+  - [x] setup `.vinotes/config.json`
+  - [x] write appropriate `config.json`
+  - [x] implement in all applicable `utils`
 
 # 2. Commands
 - [x] 2.1 help - `.vinotes/bin/help.sh`
