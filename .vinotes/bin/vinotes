@@ -9,6 +9,7 @@ create-note | cn)
   ;;
 open-daily | od)
   # execute daily note creation and opening python script
+  command $PWD/.vinotes/utils/create_daily_note.py "${@}"
   ;;
 backup)
   # execute git backup script

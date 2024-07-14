@@ -22,9 +22,10 @@ _First production version will be released at the completion of 2.3 and 2.5._
 
 - [x] 2.2 open vault - `.vinotes/bin/openvault.sh`
 
-- [ ] 2.3 open / create daily
-  - [ ] ignore daily directory option in `create_note.py`
-  - [ ] file creation and apply template content
+- [x] 2.3 open / create daily
+  - [x] create template for daily
+  - [x] ignore daily directory option in `create_note.py`
+  - [x] file creation and apply template content for daily note and open note
 
 - [x] 2.4 create zettelkasten notes in `create_note.py`
   - [x] fleeting notes - on the fly, raw data

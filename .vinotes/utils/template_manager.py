@@ -1,3 +1,6 @@
+# purpose: provides template content to note-creating scripts.
+# command: none
+
 # import modules
 import os
 import sys
@@ -13,12 +16,14 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..',
 from fleeting import content as fleeting
 from literature import content as literature
 from permanent import content as permanent
+from daily import content as daily
 
 # funcs dictionary
 funcs = {
     "fleeting": fleeting, 
     "literature": literature, 
-    "permanent": permanent
+    "permanent": permanent,
+    "daily": daily
 }
 
 # get timestamp

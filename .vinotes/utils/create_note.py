@@ -3,9 +3,9 @@
 # purpose: creates a note by taking in the directory's name and the filename to create
 #          and then will create a file with the given name inside of the directory
 #          specified and apply the template specific to the directory.
-# command: vinotes create <folder> <filename>
+# command: vinotes create-note <folder> <filename>
 
-# import libraries
+# import packages
 import os
 import sys
 from pathlib import Path
@@ -36,6 +36,13 @@ elif len(args) < 4:
 # create dir and file variables
 dir = args[2]
 file = args[3]
+
+# if given directory == daily, print message and quit.
+if dir == "daily": 
+    print()
+    print("Please use open-daily, od command within vinotes")
+    print("to create a daily note.")
+    quit()
 
 # check for files in specified folder
 files = os.listdir(f"{dir}/")
