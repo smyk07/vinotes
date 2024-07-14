@@ -5,7 +5,7 @@
 
 (upon release of the first production version, `dev` will split off `main`, which will then act as the parent for all feature branches.)
 
-_First production version will be released at the completion of 1.4, 2.3, and 2.5._
+_First production version will be released at the completion of 1.4, 1.5, 2.3, and 2.5._
 
 # 1. Internal Functionality
 - [x] 1.1 Setup virtualenv activate script - `.vinotes/bin/activate.sh`
@@ -23,6 +23,8 @@ _First production version will be released at the completion of 1.4, 2.3, and 2.
   - [x] setup `.vinotes/config.json`
   - [x] write appropriate `config.json`
   - [x] implement in all applicable `utils`
+
+- [ ] 1.5 Setup Directory Creation in `.vinotes/utils/create_note.py`
 
 # 2. Commands
 - [x] 2.1 help - `.vinotes/bin/help.sh`
