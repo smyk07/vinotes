@@ -38,4 +38,4 @@ def get_template(func, filename):
     if func in funcs: 
         return funcs[func](filename, timestamp)
     else: 
-        raise Exception(f"{func} not implemented, thus cant access template")
+        raise Exception(f"cannot find template {func}")
