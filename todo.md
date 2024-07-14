@@ -4,7 +4,7 @@
 - These feature branches will merge into main when the feature implementation is complete (as this is a small project for now)
 
 (upon release of the first production version, `dev` will split off `main`, which will then act as the parent for all feature branches.)
-_First production version will be released at the completion of 2.3 and 2.5._
+_First production version will be released at the completion of 1.4, 2.3, and 2.5._
 
 # 1. Internal Functionality
 - [x] 1.1 Setup virtualenv activate script - `.vinotes/bin/activate.sh`
@@ -16,6 +16,8 @@ _First production version will be released at the completion of 2.3 and 2.5._
 - [ ] 1.3 Custom template creation / detection system
   - [ ] detect templates automatically
   - [ ] if directory does not exist, ask weather to create or exit from user (every time create_note runs)
+
+- [ ] 1.4 Configuration for multiple factors such as directories, date-time format, etc... `.vinotes/config.json`
 
 # 2. Commands
 - [x] 2.1 help - `.vinotes/bin/help.sh`
