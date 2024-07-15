@@ -34,9 +34,9 @@ _First production version will be released at the completion of 1.4, 2.2, 2.3, a
 - [ ] 2.2 open vault - `.vinotes/bin/openvault.sh`
   - [x] basic integration (just opens `./index.md`)
   - [ ] every time command is run: 
-    - update `index.md` with past 5 daily files --- `config.md` integration opportunity for how many files to display
-    - update `index.md` with random quote
-    - update `index.md` with latest created files (very experimental and exceptional to first production release)
+    - [ ] update `index.md` with past 5 daily files --- `config.md` integration opportunity for how many files to display
+    - [ ] update `index.md` with random quote
+    - [ ] update `index.md` with latest created files (very experimental and exceptional to first production release)
 
 - [x] 2.3 open / create daily
   - [x] create template for daily
