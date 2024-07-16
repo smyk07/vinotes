@@ -10,4 +10,4 @@ with open(".vinotes/utils/quotes.json", "r") as data:
 
 def get_quote():
     quote_rand_index = random.randint(0, len(quotes)-1)
-    return quotes [quote_rand_index]
+    return quotes[quote_rand_index]

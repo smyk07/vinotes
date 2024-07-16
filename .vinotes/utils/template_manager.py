@@ -18,10 +18,10 @@ ct = datetime.datetime.now()
 timestamp = ct.strftime(get_config("timestamp_format"))
 
 # manage templating
-def get_template(func, filename):
+def get_template(func, filename, *extras):
     try: 
         template_module = importlib.import_module(f"templates.{func}", ".")
-        template = template_module.Templates(filename, timestamp)
+        template = template_module.Templates(filename, timestamp, extras[0])
         return template.content()
     except:
         raise Exception("Errors loading functions")

@@ -11,4 +11,12 @@
 #         display a quote
 # ----------------------------------------------------------
 
+# import modules
+from pathlib import Path
+from quote_manager import get_quote
+from template_manager import get_template
 
+index_path = Path("./index.md")
+
+with index_path.open("w") as index:
+    index.write(get_template("index", "index.md", get_quote()))
