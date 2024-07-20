@@ -12,11 +12,28 @@
 # ----------------------------------------------------------
 
 # import modules
+import subprocess
+import os 
 from pathlib import Path
+from config_manager import get_config
 from quote_manager import get_quote
 from template_manager import get_template
 
+# set index.md path
 index_path = Path("./index.md")
 
+# define head of daily files 
+daily_files = os.listdir(f"./{get_config("daily_notes_directory")}")
+daily_files.reverse()
+daily_head = ""
+if len(daily_files) >= 5:
+    daily_files = daily_files[0:5]
+for i in daily_files:
+    daily_head = f"{daily_head}- {i}\n"
+
+# write template to index.md
 with index_path.open("w") as index:
-    index.write(get_template("index", "index.md", get_quote()))
+    index.write(get_template("index", "index.md", get_quote(), daily_head))
+
+# open index.md 
+subprocess.run(f"{get_config("vim_command")} index.md", shell=True, executable="/bin/bash")

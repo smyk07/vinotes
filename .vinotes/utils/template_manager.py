@@ -21,7 +21,7 @@ timestamp = ct.strftime(get_config("timestamp_format"))
 def get_template(func, filename, *extras):
     try: 
         template_module = importlib.import_module(f"templates.{func}", ".")
-        template = template_module.Templates(filename, timestamp, extras[0])
+        template = template_module.Templates(filename, timestamp, *extras)
         return template.content()
     except:
         raise Exception("Errors loading functions")

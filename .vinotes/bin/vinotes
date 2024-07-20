@@ -2,7 +2,7 @@
 case $1 in
 open)
   # execute vault opening python script
-  command $PWD/.vinotes/bin/openvault.sh
+  command $PWD/.vinotes/utils/open_vault.py
   ;;
 create-note | cn)
   command $PWD/.vinotes/utils/create_note.py "${@}"
@@ -16,7 +16,7 @@ backup)
   ;;
 --help | -h)
   # execute help message script
-  command $PWD/.vinotes/bin/help.sh
+  command $PWD/.vinotes/utils/help.sh
   ;;
 *)
   echo "Please enter a valid parameter... (use -h for help)"
