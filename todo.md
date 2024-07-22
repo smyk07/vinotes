@@ -5,7 +5,7 @@
 
 (upon release of the first production version, `dev` will split off `main`, which will then act as the parent for all feature branches.)
 
-_First production version will be released at the completion of 1.4, 1.5, 2.2, 2.3, and 2.5._
+_First production version will be released at the completion of 1.4, 1.5, 2.3, and 2.5._
 
 # 1. Internal Functionality
 
