@@ -6,14 +6,14 @@ create-note | cn)
   ;;
 open-daily | od)
   # execute daily note creation and opening python script
-  command $PWD/.vinotes/utils/create_daily_note.py "${@}"
+  command $PWD/.vinotes/utils/open_daily.py "${@}"
   ;;
 backup)
   # execute git backup script
   ;;
 --help | -h)
   # execute help message script
-  command $PWD/.vinotes/utils/help.sh
+  command $PWD/.vinotes/utils/help.py
   ;;
 *)
   echo "Please enter a valid parameter... (use -h for help)"
