@@ -1,10 +1,11 @@
-class Templates():
+class Templates:
     def __init__(self, filename, timestamp):
         self.filename = filename
         self.timestamp = timestamp
 
     def content(self):
-        return (f""
+        return (
+            f""
             f"---\n"
             f"title: {self.filename}\n"
             f"creation: {self.timestamp}\n"

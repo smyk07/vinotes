@@ -5,7 +5,7 @@
 
 (upon release of the first production version, `dev` will split off `main`, which will then act as the parent for all feature branches.)
 
-_First production version will be released at the completion of 1.4, 2.2, 2.3, and 2.5._
+_First production version will be released at the completion of 1.4, 1.5, 2.2, 2.3, and 2.5._
 
 # 1. Internal Functionality
 
@@ -40,8 +40,8 @@ _First production version will be released at the completion of 1.4, 2.2, 2.3, a
 
   - [x] basic integration (just opens `./index.md`)
   - [ ] every time command is run:
-    - [ ] update `index.md` with past 5 daily files --- `config.md` integration opportunity for how many files to display
-    - [ ] update `index.md` with random quote
+    - [x] update `index.md` with past 5 daily files --- `config.md` integration opportunity for how many files to display
+    - [x] update `index.md` with random quote
     - [ ] update `index.md` with latest created files (very experimental and exceptional to first production release)
 
 - [x] 2.3 open / create daily
