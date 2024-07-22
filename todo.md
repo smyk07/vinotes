@@ -30,7 +30,7 @@
 
 - [ ] 1.7 write a create-vault bash script to make a fresh vault every install
 
-- [ ] 1.8 open file when created option in `config.json`.
+- [x] 1.8 open file when created option in `config.json`.
 
 # 2. Commands
 
