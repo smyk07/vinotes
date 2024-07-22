@@ -5,7 +5,7 @@
 
 (upon release of the first production version, `dev` will split off `main`, which will then act as the parent for all feature branches.)
 
-_First production version will be released at the completion of 1.4, 1.5, 2.3, and 2.5._
+_First production version will be released at the completion of 1.4, 1.5, 1.7, 2.3, and 2.5._
 
 # 1. Internal Functionality
 
@@ -30,6 +30,8 @@ _First production version will be released at the completion of 1.4, 1.5, 2.3, a
 - [ ] 1.5 Setup Directory Creation in `.vinotes/utils/create_note.py` (make it so that anyone can make a file like `./literature/books/Metamorphosis Franz Kafka.md`)
 
 - [x] 1.6 shift all file creation to pathlib
+
+- [ ] 1.7 write a create-vault bash script to make a fresh vault every install
 
 # 2. Commands
 
