@@ -1,10 +1,7 @@
 # Do not touch the below code unless you are really confident
 case $1 in
-open)
-  # execute vault opening python script
-  command $PWD/.vinotes/utils/open_vault.py
-  ;;
 create-note | cn)
+  # execute file creation python script
   command $PWD/.vinotes/utils/create_note.py "${@}"
   ;;
 open-daily | od)
