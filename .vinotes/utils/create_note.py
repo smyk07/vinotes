@@ -8,9 +8,10 @@
 # import packages
 import sys
 from pathlib import Path
+import subprocess
 
 # import templates
-from template_manager import get_template
+from template_manager import get_config, get_template
 
 # assignment of arguments to variable
 args = sys.argv
@@ -63,6 +64,20 @@ file = Path(f"./{file_path}.md")
 if file.is_file():
     print()
     print(f"{file_name}.md exists in {file_path}")
+    open_file = input("Open file? (Y/n): ")
+    if open_file == "y" or open_file == "":
+        subprocess.run(
+            f"{get_config("vim_command")} ./{file_path}.md",
+            shell=True,
+            executable="/bin/bash",
+        )
 else:
     with file.open("w") as note:
         note.write(get_template(template, file_name))
+    open_file = get_config("open_note_when_created")
+    if open_file:
+        subprocess.run(
+            f"{get_config("vim_command")} ./{file_path}.md",
+            shell=True,
+            executable="/bin/bash",
+        )
