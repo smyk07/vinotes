@@ -30,7 +30,12 @@
 
 - [ ] 1.7 write a create-vault bash script to make a fresh vault every install
 
+  - [ ] clone git repo for creation of vault
+  - [ ] ask questions for `config.json` fields
+
 - [x] 1.8 open file when created option in `config.json`.
+
+- [ ] 1.9 after all config fields are setup for the first release, divide the "categories" of config to different lists.
 
 # 2. Commands
 
