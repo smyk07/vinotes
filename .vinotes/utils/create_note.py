@@ -6,7 +6,6 @@
 # command: vinotes create-note <folder> <filename>
 
 # import packages
-import os
 import sys
 from pathlib import Path
 
@@ -16,7 +15,7 @@ from template_manager import get_template
 # assignment of arguments to variable
 args = sys.argv
 
-# if - there are spaces between the file name, concatenate them into 1 string item and 
+# if - there are spaces between the file name, concatenate them into 1 string item and
 #      return a args list of only 3 elements always
 # elif - theres less than 3 arguments, quit and display correct usage.
 if len(args) > 4:
@@ -36,26 +35,21 @@ elif len(args) < 4:
     print("vinotes create <folder> <filename>")
     quit()
 
-# create dir and file variables
-dir = args[2]
-file = args[3]
-
 # if given directory == daily, print message and quit.
-if dir == "daily": 
+if args[2] == "daily":
     print()
     print("Please use open-daily, od command within vinotes")
     print("to create a daily note.")
     quit()
 
-# check for files in specified folder
-files = os.listdir(f"{dir}/")
+# create file variable
+file = Path(f"./{args[2]}/{args[3]}.md")
 
 # if - file exists, do not create and quit.
 # else - create file, apply template.
-if (f"{file}.md") in files: 
+if file.is_file():
     print()
-    print(f"{file}.md exists in {dir}")
-else: 
-    note_path = Path(f"./{dir}/{file}.md")
-    with note_path.open("w") as note:
-        note.write(get_template(dir, file))
+    print(f"{args[3]}.md exists in {args[2]}")
+else:
+    with file.open("w") as note:
+        note.write(get_template(args[2], args[3]))
