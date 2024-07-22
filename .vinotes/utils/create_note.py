@@ -3,7 +3,7 @@
 # purpose: creates a note by taking in the directory's name and the filename to create
 #          and then will create a file with the given name inside of the directory
 #          specified and apply the template specific to the directory.
-# command: vinotes create-note <folder> <filename>
+# command: vinotes create-note <path/to/note>
 
 # import packages
 import sys
@@ -15,41 +15,54 @@ from template_manager import get_template
 # assignment of arguments to variable
 args = sys.argv
 
-# if - there are spaces between the file name, concatenate them into 1 string item and
-#      return a args list of only 3 elements always
-# elif - theres less than 3 arguments, quit and display correct usage.
-if len(args) > 4:
+# construct filename into a single list element
+if len(args) > 3:
     templist = []
     tempstr = ""
     for i in range(0, len(args)):
-        if i <= 2:
+        if i <= 1:
             templist.append(args[i])
-        elif i >= 3:
+        elif i >= 2:
             tempstr = f"{tempstr} {args[i]}"
     templist.append(tempstr[1:])
     args = templist
-elif len(args) < 4:
+elif len(args) < 3:
     print()
-    print("2 arguments needed, got less or more than 2 ")
+    print("Please enter a path to your note")
     print("Correct usage:")
-    print("vinotes create <folder> <filename>")
+    print("vinotes create <path/to/note>")
     quit()
 
+# split path to note
+file_path = args[2]
+path_split = file_path.split("/")
+template = path_split[0]
+file_name = path_split[len(path_split) - 1]
+
 # if given directory == daily, print message and quit.
-if args[2] == "daily":
+if template == "daily":
     print()
     print("Please use open-daily, od command within vinotes")
     print("to create a daily note.")
     quit()
 
+# create directories if they dont exist
+dirstring = ""
+if len(path_split) > 1:
+    for i in range(0, len(path_split)):
+        if i < len(path_split) - 1:
+            dirstring = f"{dirstring}/{path_split[i]}"
+dir_path = Path(f".{dirstring}")
+dir_path.mkdir(parents=True, exist_ok=True)
+
 # create file variable
-file = Path(f"./{args[2]}/{args[3]}.md")
+file = Path(f"./{file_path}.md")
 
 # if - file exists, do not create and quit.
 # else - create file, apply template.
 if file.is_file():
     print()
-    print(f"{args[3]}.md exists in {args[2]}")
+    print(f"{file_name}.md exists in {file_path}")
 else:
     with file.open("w") as note:
-        note.write(get_template(args[2], args[3]))
+        note.write(get_template(template, file_name))
