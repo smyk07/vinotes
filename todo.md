@@ -34,7 +34,10 @@
 
 # 2. Commands
 
-- [x] 2.1 help - `.vinotes/bin/help.sh`
+- [ ] 2.1 help - `.vinotes/bin/help.sh`
+
+  - [ ] write help docs for all commands until now
+  - [ ] allow searching of commands in help command
 
 - [x] 2.2 - trashed - open vault - `.vinotes/bin/openvault.sh` (Functionality trashed cuz doesnt make sense)
 
