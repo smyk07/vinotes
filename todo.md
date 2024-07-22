@@ -24,11 +24,13 @@
   - [x] write appropriate `config.json`
   - [x] implement in all applicable `utils`
 
-- [ ] 1.5 Setup Directory Creation in `.vinotes/utils/create_note.py` (make it so that anyone can make a file like `./literature/books/Metamorphosis Franz Kafka.md`)
+- [x] 1.5 Setup Directory Creation in `.vinotes/utils/create_note.py` (make it so that anyone can make a file like `./literature/books/Metamorphosis Franz Kafka.md`)
 
 - [x] 1.6 shift all file creation to pathlib
 
 - [ ] 1.7 write a create-vault bash script to make a fresh vault every install
+
+- [ ] 1.8 open file when created option in `config.json`.
 
 # 2. Commands
 
