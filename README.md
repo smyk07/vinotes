@@ -12,6 +12,8 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/smyk07/vinotes/main/crea
 
 When you first create a vault, you want to activate the vault, and setup configurations (more information below).
 
+For more in-depth documentation and on customizations, refer to the [Wiki](https://github.com/smyk07/vinotes/wiki).
+
 ## Features
 
 Vinotes comes with a simple note-taking system which includes:
