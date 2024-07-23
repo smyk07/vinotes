@@ -16,13 +16,12 @@ sys.path.insert(0, "..")
 ct = datetime.datetime.now()
 timestamp = ct.strftime(get_config("timestamp_format"))
 
+
 # manage templating
-
-
 def get_template(func, filename, *extras):
     try:
         template_module = importlib.import_module(f"templates.{func}", ".")
         template = template_module.Templates(filename, timestamp, *extras)
         return template.content()
-    except:
-        raise Exception("Errors loading functions")
+    except ModuleNotFoundError:
+        return False

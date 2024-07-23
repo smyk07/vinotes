@@ -11,12 +11,15 @@ from pathlib import Path
 import subprocess
 
 # import templates
-from template_manager import get_config, get_template
+from template_manager import get_template
+
+# import config
+from config_manager import get_config
 
 # assignment of arguments to variable
 args = sys.argv
 
-# construct filename into a single list element
+# combining filepath into a single list element
 if len(args) > 3:
     templist = []
     tempstr = ""
@@ -54,30 +57,36 @@ if len(path_split) > 1:
         if i < len(path_split) - 1:
             dirstring = f"{dirstring}/{path_split[i]}"
 dir_path = Path(f".{dirstring}")
-dir_path.mkdir(parents=True, exist_ok=True)
 
 # create file variable
 file = Path(f"./{file_path}.md")
+
+
+# define function for opening note, as its repeated below in 2 cases...
+def open_with_editor(vim_command, file_path):
+    subprocess.run(
+        f'{vim_command} "{file_path}.md"',
+        shell=True,
+        executable="/bin/bash",
+    )
+
 
 # if - file exists, do not create and quit.
 # else - create file, apply template.
 if file.is_file():
     print()
     print(f"{file_name}.md exists in {file_path}")
-    open_file = input("Open file? (Y/n): ")
-    if open_file == "y" or open_file == "":
-        subprocess.run(
-            f"{get_config("vim_command")} ./{file_path}.md",
-            shell=True,
-            executable="/bin/bash",
-        )
+    open_note = input("Open note? (Y/n): ")
+    if open_note == "y" or open_note == "":
+        open_with_editor(get_config("vim_command"), file_path)
 else:
-    with file.open("w") as note:
-        note.write(get_template(template, file_name))
-    open_file = get_config("open_note_when_created")
-    if open_file:
-        subprocess.run(
-            f"{get_config("vim_command")} ./{file_path}.md",
-            shell=True,
-            executable="/bin/bash",
-        )
+    temp_data = get_template(template, file_name)
+    if not temp_data:
+        print("Cannot create file, template not found")
+        quit()
+    else:
+        dir_path.mkdir(parents=True, exist_ok=True)
+        with file.open("w") as note:
+            note.write(temp_data)
+        if get_config("open_note_when_created"):
+            open_with_editor(get_config("vim_command"), file_path)

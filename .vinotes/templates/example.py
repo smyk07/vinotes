@@ -9,7 +9,6 @@ class Templates:
 
     def content(self):
         return (
-            f""
             f"---\n"
             f"title: {self.filename}\n"
             f"creation: {self.timestamp}\n"
