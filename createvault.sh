@@ -1,10 +1,10 @@
 #!/bin/bash
 
-echo "Cloning repo..."
+echo "▷Cloning repo..."
 echo ""
 command git clone https://github.com/smyk07/vinotes.git .
 
-echo "Repo Cloned"
+echo "▷Repo Cloned"
 command rm -rf .git todo.md README.md
 
 echo ""
