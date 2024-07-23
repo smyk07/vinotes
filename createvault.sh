@@ -13,6 +13,9 @@ echo "▷ Creating Principle Directories..."
 command mkdir daily fleeting literature permanent
 
 echo ""
+echo "▷ Initial Setup Done ✔"
+
+echo ""
 echo "▷ Get started by entering the command:"
 echo "    source .vinotes/bin/activate.sh"
 echo ""
