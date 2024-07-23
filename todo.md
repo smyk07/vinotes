@@ -28,10 +28,9 @@
 
 - [x] 1.6 shift all file creation to pathlib
 
-- [ ] 1.7 write a create-vault bash script to make a fresh vault every install
+- [x] 1.7 write a create-vault bash script to make a fresh vault every install
 
-  - [ ] clone git repo for creation of vault
-  - [ ] ask questions for `config.json` fields
+  - [x] clone git repo for creation of vault
 
 - [x] 1.8 open file when created option in `config.json`.
 
@@ -66,7 +65,7 @@
   - [x] update `template_manager.py`
   - [x] testing
 
-- [ ] 2.5 backup vault
+- [x] 2.5 - trashed - backup vault - users can setup their backup themselves.
 
 # 3. Releases
 
