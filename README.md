@@ -4,14 +4,6 @@
 
 The motivation for me to create this project was for me to take notes in Neovim systematically. This repository is always open to contributions. Happy hacking :)
 
-Create a vault in the current (empty) directory by pasting this command:
-
-```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/smyk07/vinotes/main/createvault.sh)"
-```
-
-When you first create a vault, you want to activate the vault, and setup configurations (more information below).
-
 For more in-depth documentation and on customizations, refer to the [Wiki](https://github.com/smyk07/vinotes/wiki).
 
 ## Features
@@ -33,7 +25,15 @@ Vinotes comes with a simple note-taking system which includes:
 
 ## Getting Started & Basic Usage
 
-**You can access all of Vinotes' commands with either the `vinotes` or the `vn` prefix.**
+Alternatively, refer to [Kickstart](https://github.com/smyk07/vinotes/wiki/1.-Kickstart) (recommended)
+
+### Vault Creation
+
+Create a vault in the current (empty) directory by pasting this command:
+
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/smyk07/vinotes/main/createvault.sh)"
+```
 
 ### Activation
 
@@ -44,6 +44,8 @@ source .vinotes/bin/activate.sh
 ```
 
 ### Edit Configuration
+
+**You can access all of Vinotes' commands with either the `vinotes` or the `vn` prefix.**
 
 To edit the configuration (in `nano`):
 
@@ -87,7 +89,7 @@ vn od
 
 ### Help
 
-You can access help using any of the following commands:
+You can access the help prompt using any of the following commands:
 
 ```
 vinotes --help
