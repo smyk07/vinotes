@@ -75,7 +75,7 @@ vn cn fleeting/books/1984 by George Orwell
 
 ### Open Daily
 
-To open today's daily note, enter the command:
+To open today's daily note, you can use either the `open-daily` or `od` keyword, as follows:
 
 ```
 vinotes open-daily
