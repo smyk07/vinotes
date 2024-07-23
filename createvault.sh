@@ -4,8 +4,13 @@ echo "▷ Cloning repo..."
 echo ""
 command git clone https://github.com/smyk07/vinotes.git .
 
+echo ""
 echo "▷ Repo Cloned"
 command rm -rf .git todo.md README.md
+
+echo ""
+echo "▷ Creating Principle Directories..."
+command mkdir daily fleeting literature permanent
 
 echo ""
 echo "▷ Get started by entering the command:"
