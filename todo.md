@@ -38,7 +38,7 @@
 
 # 2. Commands
 
-- [ ] 2.1 help - `.vinotes/bin/help.sh`
+- [ ] 2.1 help - `.vinotes/utils/help.py`
 
   - [ ] write help docs for all commands until now
   - [ ] allow searching of commands in help command
