@@ -1,3 +1,16 @@
 #!/usr/bin/python3
 
+print()
 print("Vinotes - External Note-Taking utility for Neovim.")
+print()
+print("command           -                    description")
+print()
+print("conf              -    Edit Vinotes configuration.")
+print()
+print("create-note or cn -             Create a new note.")
+print("- usage: vinotes create-note <path/to/file>")
+print()
+print("open-daily or od  -          Opens the daily note.")
+print("- usage: vinotes open-daily")
+print()
+print("--help or -h      -          Opens this help menu.")

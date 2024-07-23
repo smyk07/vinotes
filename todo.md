@@ -38,10 +38,9 @@
 
 # 2. Commands
 
-- [ ] 2.1 help - `.vinotes/utils/help.py`
+- [x] 2.1 help - `.vinotes/utils/help.py`
 
-  - [ ] write help docs for all commands until now
-  - [ ] allow searching of commands in help command
+  - [x] write help docs for all commands until now
 
 - [x] 2.2 - trashed - open vault - `.vinotes/bin/openvault.sh` (Functionality trashed cuz doesnt make sense)
 
