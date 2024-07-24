@@ -43,6 +43,8 @@
 
 - [x] 1.11 Implement a fuzzy finder functionality within the command `vn open-note`
 
+- [ ] 1.12 Clean up code, fix variables.
+
 # 2. Commands
 
 - [x] 2.1 help - `.vinotes/utils/help.py`
