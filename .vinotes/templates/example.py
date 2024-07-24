@@ -1,5 +1,5 @@
-# Just copy this file and name it as per your custom template,
-# then start editing this template.
+# This is a simple notes template, edit it however you like but be
+# careful for the variables and `\n` escapes.
 
 
 class Templates:

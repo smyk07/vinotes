@@ -69,7 +69,7 @@
 
 - [x] 2.5 - trashed - backup vault - users can setup their backup themselves.
 
-- [ ] 2.6 - add command `vn reload` to check for new templates and new principle directories.
+- [x] 2.6 - add command `vn reload` to check for new templates and new principle directories.
 
 # 3. Releases
 

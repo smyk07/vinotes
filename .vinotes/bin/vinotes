@@ -11,6 +11,10 @@ open-daily | od)
   # execute daily note creation and opening python script
   command $PWD/.vinotes/utils/open_daily.py "${@}"
   ;;
+reload | rl)
+  # execute reload script
+  command $PWD/.vinotes/utils/reload.py
+  ;;
 --help | -h)
   # execute help message script
   command $PWD/.vinotes/utils/help.py
