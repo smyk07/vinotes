@@ -82,7 +82,7 @@
 
 - [x] 2.7 command - `vn open-note`
   - [x] Basic implementation
-  - [x] fuzzy finder (todo-1.11)
+  - [x] # fuzzy finder (todo-1.11)
 
 # 3. Releases
 
