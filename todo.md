@@ -41,7 +41,7 @@
   - [x] internal functionality at `todo-2.6`
   - [x] removes zettelkasten default features, upto the user to create principle directories, will only ship with daily and example templates.
 
-- [ ] 1.11 Implement a fuzzy finder functionality within the command `vn open-note`
+- [x] 1.11 Implement a fuzzy finder functionality within the command `vn open-note`
 
 # 2. Commands
 
@@ -75,9 +75,9 @@
 
 - [x] 2.6 - add command `vn reload` to check for new templates and new principle directories.
 
-- [ ] 2.7 command - `vn open-note`
-  - [ ] Basic implementation
-  - [ ] fuzzy finder (todo-1.11)
+- [x] 2.7 command - `vn open-note`
+  - [x] Basic implementation
+  - [x] fuzzy finder (todo-1.11)
 
 # 3. Releases
 
