@@ -1,3 +1,6 @@
+# pycache folders
 .vinotes/templates/__pycache__/
 .vinotes/utils/__pycache__/
+
+# smyk07's testing directory
 testdir/
