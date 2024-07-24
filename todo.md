@@ -36,6 +36,9 @@
 
 - [ ] 1.9 after all config fields are setup for the first release, divide the "categories" of config to different lists.
 
+- [ ] 1.10 Add principle directory configuration options in `config.json`
+  - [ ] removes zettelkasten default features, upto the user to create principle directories, will only ship with daily and example templates.
+
 # 2. Commands
 
 - [x] 2.1 help - `.vinotes/utils/help.py`
@@ -65,6 +68,8 @@
   - [x] testing
 
 - [x] 2.5 - trashed - backup vault - users can setup their backup themselves.
+
+- [ ] 2.6 - add command `vn reload` to check for new templates and new principle directories.
 
 # 3. Releases
 
