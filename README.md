@@ -4,7 +4,11 @@
 
 The motivation for me to create this project was for me to take notes in Neovim systematically. This repository is always open to contributions. Happy hacking :)
 
-Refer to [Kickstart](https://github.com/smyk07/vinotes/wiki/1.-Kickstart) to get started.
+Refer to [Kickstart](https://github.com/smyk07/vinotes/wiki/1.-Kickstart) to get started, or use this command:
+
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/smyk07/vinotes/main/createvault.sh)"
+```
 
 For more in-depth documentation and on customizations, refer to the [Wiki](https://github.com/smyk07/vinotes/wiki).
 
