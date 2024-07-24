@@ -27,6 +27,7 @@ Vinotes comes with a simple note-taking system which includes:
 - Linux
 - Git
 - python3
+- fzf
 - nvim, vim or any text editor for editing markdown files.
 
 ## Contributing
