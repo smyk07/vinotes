@@ -5,7 +5,7 @@ conf)
   ;;
 open-note | on)
   # execute open note script 
-  command $PWD/.vinotes/utils/open-note.py "${@}"
+  command $PWD/.vinotes/utils/open_note.py "${@}"
   ;;
 create-note | cn)
   # execute file creation python script
