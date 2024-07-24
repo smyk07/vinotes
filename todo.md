@@ -36,9 +36,9 @@
 
 - [ ] 1.9 after all config fields are setup for the first release, divide the "categories" of config to different lists.
 
-- [ ] 1.10 Add principle directory configuration options in `config.json`
-  - [ ] internal functionality at `todo-2.6`
-  - [ ] removes zettelkasten default features, upto the user to create principle directories, will only ship with daily and example templates.
+- [x] 1.10 Add principle directory configuration options in `config.json`
+  - [x] internal functionality at `todo-2.6`
+  - [x] removes zettelkasten default features, upto the user to create principle directories, will only ship with daily and example templates.
 
 # 2. Commands
 
