@@ -2,6 +2,8 @@
 
 ## Structure Changes
 
+- Code is cleaned and optimized.
+
 - Vinotes now does not ship with the default zettelkasten note-taking system, instead allows user to create their own principle directories when editing config.
 
   - Templates also deleted

@@ -4,17 +4,15 @@
 # command: vinotes open-daily
 
 # import packages
-from pathlib import Path
 import datetime
+from pathlib import Path
 import subprocess
 
-# import config
+# import config and templates
 from config_manager import get_config
-
-# import templates
 from template_manager import get_template
 
-# setting date variable to name the file...
+# setting date variable
 date = datetime.datetime.now().strftime(get_config("date_format"))
 
 # setting daily notes directory variable
@@ -33,11 +31,8 @@ if file.is_file():
         executable="/bin/bash",
     )
 else:
-    temp_data = get_template("daily", date)
-    if not temp_data:
-        print("Cannot create file, template not found")
-        quit()
-    else:
+    try:
+        temp_data = get_template("daily", date)
         daily_dir_path.mkdir(parents=True, exist_ok=True)
         with file.open("w") as note:
             note.write(temp_data)
@@ -46,3 +41,6 @@ else:
             shell=True,
             executable="/bin/bash",
         )
+    except ModuleNotFoundError:
+        print("Cannot create file, template not found")
+        quit()

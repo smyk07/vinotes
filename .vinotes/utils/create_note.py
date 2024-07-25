@@ -10,27 +10,21 @@ import sys
 from pathlib import Path
 import subprocess
 
-# import templates
+# import templates and config
 from template_manager import get_template
-
-# import config
 from config_manager import get_config
 
-# assignment of arguments to variable
-args = sys.argv
-
 # combining filepath into a single list element
-if len(args) > 3:
-    templist = []
+if len(sys.argv) >= 3:
+    args = []
     tempstr = ""
-    for i in range(0, len(args)):
+    for i in range(0, len(sys.argv)):
         if i <= 1:
-            templist.append(args[i])
+            args.append(sys.argv[i])
         elif i >= 2:
-            tempstr = f"{tempstr} {args[i]}"
-    templist.append(tempstr[1:])
-    args = templist
-elif len(args) < 3:
+            tempstr = f"{tempstr} {sys.argv[i]}"
+    args.append(tempstr[1:])
+else:
     print()
     print("Please enter a path to your note")
     print("Correct usage:")
@@ -80,13 +74,13 @@ if file.is_file():
     if open_note == "y" or open_note == "":
         open_with_editor(get_config("vim_command"), file_path)
 else:
-    temp_data = get_template(template, file_name)
-    if not temp_data:
-        print("Cannot create file, template not found")
-        quit()
-    else:
+    try:
+        temp_data = get_template(template, file_name)
         dir_path.mkdir(parents=True, exist_ok=True)
         with file.open("w") as note:
             note.write(temp_data)
         if get_config("open_note_when_created"):
             open_with_editor(get_config("vim_command"), file_path)
+    except ModuleNotFoundError:
+        print("Cannot create file, template not found")
+        quit()

@@ -43,7 +43,7 @@
 
 - [x] 1.11 Implement a fuzzy finder functionality within the command `vn open-note`
 
-- [ ] 1.12 Clean up code, fix variables (24-07-2024).
+- [x] 1.12 Clean up code, fix variables (24-07-2024).
 
 - [ ] 1.13 add functionality for updating utilities if theres ever a new live update on GitHub.
   - [ ] New command `vn update`

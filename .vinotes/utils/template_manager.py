@@ -24,4 +24,4 @@ def get_template(func, filename, *extras):
         template = template_module.Templates(filename, timestamp, *extras)
         return template.content()
     except ModuleNotFoundError:
-        return False
+        raise ModuleNotFoundError

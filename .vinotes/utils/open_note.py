@@ -5,6 +5,7 @@
 
 # import packages
 import sys
+from pathlib import Path
 import subprocess
 
 # import config
@@ -31,17 +32,24 @@ if len(args) < 3:
     )[:-1]
     dirs = "".join(f"{dir} " for dir in get_config("principle_dirs"))
     try:
-        file_path = subprocess.check_output(
-            f"find {dirs} -type f | fzf",
-            shell=True,
-            executable="/bin/bash",
-        ).decode("utf-8")[:-1]
+        file_path = Path(
+            subprocess.check_output(
+                f"find {dirs} -type f | fzf",
+                shell=True,
+                executable="/bin/bash",
+            ).decode("utf-8")[:-1]
+        )
     except subprocess.CalledProcessError:
         quit()
 else:
-    file_path = f"{args[2]}"
+    file_path = Path(args[2])
 
 # open file
-subprocess.run(
-    f"{get_config("vim_command")} \"{file_path}\"", shell=True, executable="/bin/bash"
-)
+if file_path.is_file():
+    subprocess.run(
+        f"{get_config("vim_command")} \"{str(file_path)}\"",
+        shell=True,
+        executable="/bin/bash",
+    )
+else:
+    print("\nPlease enter a valid file path.")

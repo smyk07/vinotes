@@ -10,8 +10,6 @@ sys.path.insert(
     0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..", ".vinotes"))
 )
 
-config = None
-
 with open(".vinotes/config.json", "r") as data:
     config = json.load(data)
 
