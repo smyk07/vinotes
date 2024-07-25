@@ -6,10 +6,11 @@
 # import packages
 from pathlib import Path
 
-# import principle directoried from config
+# import principle directories from config
 from config_manager import get_config
 
 dirs_from_config = get_config("principle_dirs")
+dirs_from_config.append("daily")
 dirs_from_config.sort()
 
 # checking principle directories

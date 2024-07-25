@@ -18,11 +18,6 @@ with open(".vinotes/config.json", "r") as data:
 
 def get_config(key: str):
     try:
-        if key == "principle_dirs":
-            principle_dirs = config["principle_dirs"]
-            principle_dirs.append(config["daily_notes_directory"])
-            return principle_dirs
-        else:
-            return config[key]
+        return config[key]
     except KeyError:
         raise Exception(f"cannot find config field {key}")
