@@ -68,9 +68,9 @@
 
 # 3. Releases
 
-- [ ] v1.0 - First Prodiction Release
-  - [ ] test for errors & bugs
-  - [ ] update `.vinotes/bin/help.sh`
-  - [ ] create setup script (either in bash or python)
-  - [ ] update `README.md` (usage, docs, credits)
-  - [ ] PUSH & PUBLISH RELEASE!
+- [x] v1.0 - First Prodiction Release
+  - [x] test for errors & bugs
+  - [x] update `.vinotes/bin/help.sh`
+  - [x] create setup script (either in bash or python)
+  - [x] update `README.md` (usage, docs, credits)
+  - [x] PUSH & PUBLISH RELEASE!
