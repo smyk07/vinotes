@@ -21,7 +21,7 @@ reload | rl)
   ;;
 changelog)
   # execute changelog script 
-  comnand $PWD/.vinotes/utils/changelog.py
+  command $PWD/.vinotes/utils/changelog.py
   ;;
 --help | -h)
   # execute help message script
