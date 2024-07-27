@@ -53,8 +53,12 @@ for file in files:
 
     if present_file.is_file():
         if remote_file_content != present_file.read_text():
+            present_file.write_text(remote_file_content)
             print(f"{file} updated")
         else:
             print(f"{file} does not have updates")
     else:
+        # create new file
+        with present_file.open("w") as script:
+            script.write(remote_file_content)
         print(f"{file} created (new file)")
