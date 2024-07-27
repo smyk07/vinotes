@@ -19,7 +19,7 @@ reload | rl)
   # execute reload script
   command $PWD/.vinotes/utils/reload.py
   ;;
-update) 
+update) # do not run in development, will reset everything
   # execute update script 
   command $PWD/.vinotes/utils/update.py 
   ;;
