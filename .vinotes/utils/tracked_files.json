@@ -12,6 +12,5 @@
   "/utils/quotes.json",
   "/utils/reload.py",
   "/utils/template_manager.py",
-  "/utils/update.py",
-  "/dev.config.json"
+  "/utils/update.py"
 ]
