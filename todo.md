@@ -48,10 +48,10 @@
 - [ ] 1.13 add functionality for updating utilities if theres ever a new live update on GitHub.
 
   - [x] New command `vn update`
-  - [ ] Pull tracked files from remote, check if updates are needed by comparing data, update required files.
-  - [ ] figure out a way to update new config fields with retaining the changes made by the user.
+  - [x] Pull tracked files from remote, check if updates are needed by comparing data, update required files.
+  - [ ] figure out a way to update new config fields with retaining the changes made by the user - can be done with the json library.
 
-- [x] 1.14 Dev mode
+- [ ] 1.14 Dev mode
 
   - [x] create `dev.config.json`, accessible from `config-manager.py`
 
