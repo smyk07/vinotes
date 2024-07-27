@@ -81,8 +81,13 @@
 - [x] 2.6 - add command `vn reload` to check for new templates and new principle directories.
 
 - [x] 2.7 command - `vn open-note`
+
   - [x] Basic implementation
   - [x] # fuzzy finder (todo-1.11)
+
+- [ ] 1.9 comamnd - `vn update` to update binaries and utilities.
+
+- [ ] 2.8 commmand - `vn changelog` - opens changelog in nvim.
 
 # 3. Releases
 
