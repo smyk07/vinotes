@@ -1,0 +1,16 @@
+[
+  "/bin/activate.sh",
+  "/bin/vinotes",
+  "/utils/changelog.py",
+  "/utils/config_manager.py",
+  "/utils/create_note.py",
+  "/utils/edit_config.py",
+  "/utils/help.py",
+  "/utils/open_daily.py",
+  "/utils/open_note.py",
+  "/utils/quote_manager.py",
+  "/utils/quotes.json",
+  "/utils/reload.py",
+  "/utils/template_manager.py",
+  "/utils/update.py"
+]

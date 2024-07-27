@@ -19,6 +19,10 @@ reload | rl)
   # execute reload script
   command $PWD/.vinotes/utils/reload.py
   ;;
+update) 
+  # execute update script 
+  command $PWD/.vinotes/utils/update.py 
+  ;;
 changelog)
   # execute changelog script 
   command $PWD/.vinotes/utils/changelog.py
