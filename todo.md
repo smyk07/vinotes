@@ -87,7 +87,7 @@
 
 - [ ] 2.8 comamnd - `vn update` to update binaries and utilities.
 
-- [ ] 2.9 commmand - `vn changelog` - opens changelog in nvim.
+- [x] 2.9 commmand - `vn changelog` - opens changelog in nvim.
 
 # 3. Releases
 
