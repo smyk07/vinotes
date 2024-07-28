@@ -1,5 +1,5 @@
 {
-  "dev_mode": true,
+  "dev_mode": false,
   "remote_raw_repo_url": "https://raw.githubusercontent.com/smyk07/vinotes/",
   "remote_raw_repo_branch": "todo-1.13"
 }

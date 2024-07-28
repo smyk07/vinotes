@@ -51,14 +51,32 @@ for file in files:
 
     present_file = Path(f".vinotes/{file}")
 
-    if present_file.is_file():
-        if remote_file_content != present_file.read_text():
-            present_file.write_text(remote_file_content)
-            print(f"{file} updated")
+    if str(present_file).endswith(".json"):
+        if present_file.is_file():
+            remote_json = json.loads(remote_file_content)
+            present_json = json.loads(present_file.read_text())
+            if remote_json.keys() == present_json.keys():
+                print(f"{file} does not have updates")
+            else:
+                for key, value in remote_json:
+                    if key in present_json:
+                        pass
+                    else:
+                        present_json.update({key: value})
+                print(f"{file} updated")
         else:
-            print(f"{file} does not have updates")
+            with present_file.open("w") as json_file:
+                json_file.write(remote_file_content)
+            print(f"{file} created (new file)")
     else:
-        # create new file
-        with present_file.open("w") as script:
-            script.write(remote_file_content)
-        print(f"{file} created (new file)")
+        if present_file.is_file():
+            if remote_file_content != present_file.read_text():
+                present_file.write_text(remote_file_content)
+                print(f"{file} updated")
+            else:
+                print(f"{file} does not have updates")
+        else:
+            # create new file
+            with present_file.open("w") as script:
+                script.write(remote_file_content)
+            print(f"{file} created (new file)")

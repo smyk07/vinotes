@@ -45,15 +45,16 @@
 
 - [x] 1.12 Clean up code, fix variables (24-07-2024).
 
-- [ ] 1.13 add functionality for updating utilities if theres ever a new live update on GitHub.
+- [x] 1.13 add functionality for updating utilities if theres ever a new live update on GitHub.
 
   - [x] New command `vn update`
   - [x] Pull tracked files from remote, check if updates are needed by comparing data, update required files.
-  - [ ] figure out a way to update new config fields with retaining the changes made by the user - can be done with the json library.
+  - [x] figure out a way to update new config fields with retaining the changes made by the user - can be done with the json library.
 
 - [ ] 1.14 Dev mode
 
   - [x] create `dev.config.json`, accessible from `config-manager.py`
+  - [ ] `dev_utils` for developing utilities.
 
 # 2. Commands
 
