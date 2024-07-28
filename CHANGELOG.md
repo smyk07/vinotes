@@ -16,3 +16,5 @@
 
   - When file path is provided, the file is opened,
   - When file path is not provided, will open a fuzzy-finder to search across all notes in principle directories.
+
+- `vn update` - updates binaries and utilities, and configs from main branch
