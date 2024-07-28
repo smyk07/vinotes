@@ -1,4 +1,6 @@
 [
+  "/config.json",
+  "/dev.config.json",
   "/bin/activate.sh",
   "/bin/vinotes",
   "/utils/changelog.py",
@@ -8,8 +10,6 @@
   "/utils/help.py",
   "/utils/open_daily.py",
   "/utils/open_note.py",
-  "/utils/quote_manager.py",
-  "/utils/quotes.json",
   "/utils/reload.py",
   "/utils/template_manager.py",
   "/utils/update.py"
