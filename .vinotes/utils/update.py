@@ -58,11 +58,17 @@ for file in files:
             if remote_json.keys() == present_json.keys():
                 print(f"{file} does not have updates")
             else:
-                for key, value in remote_json:
+                for key, value in remote_json.items():
                     if key in present_json:
-                        pass
+                        continue
                     else:
-                        present_json.update({key: value})
+                        present_json[key] = value
+                json_file = open(str(present_file), "w")
+                cleaned_json = {
+                    k: v for k, v in present_json.items() if not isinstance(k, int)
+                }
+                json.dump(cleaned_json, json_file, indent=2)
+                json_file.close()
                 print(f"{file} updated")
         else:
             with present_file.open("w") as json_file:
