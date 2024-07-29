@@ -57,6 +57,10 @@
   - [ ] `dev_utils` for developing utilities.
   - [ ] convert vinotes binary to python script with shebang to access dev utils
 
+- [ ] 1.15 Figure out a way to handle attachments
+
+- [ ] 1.16 update create_note.py to have the ability to create notes in the vault directory without any principle directory.
+
 # 2. Commands
 
 - [x] 2.1 help - `.vinotes/utils/help.py`
