@@ -53,9 +53,9 @@
 
 - [ ] 1.14 Dev mode
 
-  - [ ] create `dev.config.json`, accessible from `dev_mode.py`
+  - [x] create `dev.config.json`
+  - [ ] create `dev_mode.py`
   - [ ] `dev_utils` for developing utilities.
-  - [ ] convert vinotes binary to python script with shebang to access dev utils
 
 - [ ] 1.15 Figure out a way to handle attachments
 
