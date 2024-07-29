@@ -102,6 +102,10 @@
 
 - [x] 2.9 commmand - `vn changelog` - opens changelog in nvim.
 
+- [ ] 2.10 `vn export-page` - ability to export pages selected from provided filepath or fzf into HTML or PDF.
+
+- [ ] 2.11 `vn export-vault` - ability to export the whole vault into HTML5. (very bare bones and experimental idea)
+
 # 3. Releases
 
 - [x] v1.0 - First Production Release
@@ -115,8 +119,9 @@
 - [ ] v1.1 - Second Production Release
 
   - [ ] test for errors & bugs
-  - [ ] update `.vinotes/bin/help.sh`
-  - [ ] create setup script (either in bash or python)
-  - [ ] update `README.md` (usage, docs, credits)
-  - [ ] update `CHANGELOG.md`
+  - [x] update `.vinotes/bin/help.sh`
+  - [x] create setup script (either in bash or python)
+  - [x] update `README.md` (usage, docs, credits)
+  - [x] update `CHANGELOG.md`
+  - [ ] update wiki
   - [ ] PUSH & PUBLISH RELEASE!

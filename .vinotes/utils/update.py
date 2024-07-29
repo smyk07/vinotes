@@ -10,7 +10,6 @@ import urllib.request
 import urllib.error
 
 # import config
-from config_manager import get_config
 from config_manager import get_dev_config
 
 # quit if dev mode is enabled in config
