@@ -98,7 +98,7 @@
   - [x] Basic implementation
   - [x] # fuzzy finder (todo-1.11)
 
-- [ ] 2.8 comamnd - `vn update` to update binaries and utilities.
+- [x] 2.8 comamnd - `vn update` to update binaries and utilities.
 
 - [x] 2.9 commmand - `vn changelog` - opens changelog in nvim.
 
