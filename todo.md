@@ -116,12 +116,12 @@
   - [x] update `README.md` (usage, docs, credits)
   - [x] PUSH & PUBLISH RELEASE!
 
-- [ ] v1.1 - Second Production Release
+- [x] v1.1 - Second Production Release
 
-  - [ ] test for errors & bugs
+  - [x] test for errors & bugs
   - [x] update `.vinotes/bin/help.sh`
   - [x] create setup script (either in bash or python)
   - [x] update `README.md` (usage, docs, credits)
   - [x] update `CHANGELOG.md`
   - [ ] update wiki
-  - [ ] PUSH & PUBLISH RELEASE!
+  - [x] PUSH & PUBLISH RELEASE!
