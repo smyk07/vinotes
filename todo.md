@@ -123,5 +123,5 @@
   - [x] create setup script (either in bash or python)
   - [x] update `README.md` (usage, docs, credits)
   - [x] update `CHANGELOG.md`
-  - [ ] update wiki
+  - [x] update wiki
   - [x] PUSH & PUBLISH RELEASE!
