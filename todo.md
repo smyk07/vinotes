@@ -59,7 +59,7 @@
 
 - [ ] 1.15 Figure out a way to handle attachments
 
-- [ ] 1.16 update create_note.py to have the ability to create notes in the vault directory without any principle directory.
+- [x] 1.16 update create_note.py to have the ability to create notes in the vault directory without any principle directory.
 
 # 2. Commands
 
