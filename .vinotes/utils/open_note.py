@@ -34,7 +34,7 @@ if len(args) < 3:
     try:
         file_path = Path(
             subprocess.check_output(
-                f"find {dirs} -type f | fzf",
+                f"find ./ {dirs} \\( -iname '*.md' \\) -type f | fzf",
                 shell=True,
                 executable="/bin/bash",
             ).decode("utf-8")[:-1]

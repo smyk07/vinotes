@@ -32,10 +32,15 @@ else:
     quit()
 
 # split path to note
-file_path = args[2]
+file_path = f"{args[2]}.md"
 path_split = file_path.split("/")
-template = path_split[0]
-file_name = path_split[len(path_split) - 1]
+template = path_split[0] if len(path_split) > 1 else "root"
+file_name = path_split[-1]
+
+print(file_path)
+print(path_split)
+print(template)
+print(file_name)
 
 # if given directory == daily, print message and quit.
 if template == "daily":
@@ -44,22 +49,24 @@ if template == "daily":
     print("to create a daily note.")
     quit()
 
-# create directories if they dont exist
+# define variables for creating directories if they dont exist
 dirstring = ""
 if len(path_split) > 1:
     for i in range(0, len(path_split)):
         if i < len(path_split) - 1:
             dirstring = f"{dirstring}/{path_split[i]}"
+else:
+    dirstring = "/"
 dir_path = Path(f".{dirstring}")
 
 # create file variable
-file = Path(f"./{file_path}.md")
+file = Path(file_path)
 
 
 # define function for opening note, as its repeated below in 2 cases...
 def open_with_editor(vim_command, file_path):
     subprocess.run(
-        f'{vim_command} "{file_path}.md"',
+        f'{vim_command} "{file_path}"',
         shell=True,
         executable="/bin/bash",
     )
@@ -69,7 +76,7 @@ def open_with_editor(vim_command, file_path):
 # else - create file, apply template.
 if file.is_file():
     print()
-    print(f"{file_name}.md exists in {file_path}")
+    print(f"{file_path} exists in {file_path}")
     open_note = input("Open note? (Y/n): ")
     if open_note == "y" or open_note == "":
         open_with_editor(get_config("vim_command"), file_path)
