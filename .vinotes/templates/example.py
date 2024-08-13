@@ -3,7 +3,7 @@
 
 
 class Templates:
-    def __init__(self, filename, timestamp):
+    def __init__(self, filename: str, timestamp: str):
         self.filename = filename
         self.timestamp = timestamp
 

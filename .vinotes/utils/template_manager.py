@@ -18,7 +18,7 @@ timestamp = ct.strftime(get_config("timestamp_format"))
 
 
 # manage templating
-def get_template(func, filename, *extras):
+def get_template(func: str, filename: str, *extras):
     try:
         template_module = importlib.import_module(f"templates.{func}", ".")
         template = template_module.Templates(filename, timestamp, *extras)

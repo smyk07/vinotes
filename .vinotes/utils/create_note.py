@@ -64,7 +64,7 @@ file = Path(file_path)
 
 
 # define function for opening note, as its repeated below in 2 cases...
-def open_with_editor(vim_command, file_path):
+def open_with_editor(vim_command: str, file_path: str):
     subprocess.run(
         f'{vim_command} "{file_path}"',
         shell=True,
