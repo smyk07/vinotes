@@ -61,6 +61,8 @@
 
 - [x] 1.16 update create_note.py to have the ability to create notes in the vault directory without any principle directory.
 
+- [ ] 1.17 re-write cli utility with typer in python.
+
 # 2. Commands
 
 - [x] 2.1 help - `.vinotes/utils/help.py`

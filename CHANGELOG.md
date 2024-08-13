@@ -2,4 +2,6 @@
 
 ## Structure Changes
 
+- `shell-executable` field in config.
+
 ## Feature Changes
