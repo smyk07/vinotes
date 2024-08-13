@@ -1,5 +1,6 @@
 {
   "vim_command": "nvim",
+  "shell_executable": "/bin/bash",
   "date_format": "%Y-%m-%d",
   "timestamp_format": "%Y-%m-%d %H:%M",
   "daily_notes_directory": "daily",

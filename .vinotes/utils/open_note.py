@@ -27,16 +27,13 @@ else:
 
 # determine path to open
 if len(args) < 3:
-    wd = subprocess.check_output("pwd", shell=True, executable="/bin/bash").decode(
-        "utf-8"
-    )[:-1]
     dirs = "".join(f"{dir} " for dir in get_config("principle_dirs"))
     try:
         file_path = Path(
             subprocess.check_output(
                 f"find ./ {dirs} \\( -iname '*.md' \\) -type f | fzf",
                 shell=True,
-                executable="/bin/bash",
+                executable=f"{get_config('shell_executable')}",
             ).decode("utf-8")[:-1]
         )
     except subprocess.CalledProcessError:
@@ -47,9 +44,9 @@ else:
 # open file
 if file_path.is_file():
     subprocess.run(
-        f"{get_config("vim_command")} \"{str(file_path)}\"",
+        f"{get_config('vim_command')} \"{str(file_path)}\"",
         shell=True,
-        executable="/bin/bash",
+        executable=f"{get_config('shell_executable')}",
     )
 else:
     print("\nPlease enter a valid file path.")

@@ -22,25 +22,30 @@ daily_dir_path = Path(daily_dir)
 # create file variable
 file = Path(f"./{daily_dir}/{date}.md")
 
+
+def open_daily(
+    vim_command=f"{get_config('vim_command')}",
+    executable=f"{get_config('shell_executable')}",
+    filepath=f"{daily_dir}/{date}.md",
+):
+    subprocess.run(
+        f"{vim_command} {filepath}",
+        shell=True,
+        executable=f"{executable}",
+    )
+
+
 # if - file exists - create and apply template
 # else - open already existing daily file
 if file.is_file():
-    subprocess.run(
-        f"{get_config("vim_command")} {daily_dir}/{date}.md",
-        shell=True,
-        executable="/bin/bash",
-    )
+    open_daily()
 else:
     try:
         temp_data = get_template("daily", date)
         daily_dir_path.mkdir(parents=True, exist_ok=True)
         with file.open("w") as note:
             note.write(temp_data)
-        subprocess.run(
-            f"{get_config("vim_command")} ./{daily_dir}/{date}.md",
-            shell=True,
-            executable="/bin/bash",
-        )
+        open_daily()
     except ModuleNotFoundError:
         print("Cannot create file, template not found")
         quit()

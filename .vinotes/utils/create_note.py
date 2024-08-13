@@ -68,7 +68,7 @@ def open_with_editor(vim_command: str, file_path: str):
     subprocess.run(
         f'{vim_command} "{file_path}"',
         shell=True,
-        executable="/bin/bash",
+        executable=f"{get_config('shell_executable')}",
     )
 
 
@@ -82,7 +82,7 @@ if file.is_file():
         open_with_editor(get_config("vim_command"), file_path)
 else:
     try:
-        temp_data = get_template(template, file_name)
+        temp_data = get_template(template, file_name[:-3])
         dir_path.mkdir(parents=True, exist_ok=True)
         with file.open("w") as note:
             note.write(temp_data)
