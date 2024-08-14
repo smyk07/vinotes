@@ -1,6 +1,10 @@
+# old vinotes 
+.vinotes_old/
+
 # pycache folders
 .vinotes/templates/__pycache__/
 .vinotes/utils/__pycache__/
+.vinotes/vinotes/__pycache__/
 
 # smyk07's testing directory
 testdir/

@@ -63,6 +63,15 @@
 
 - [ ] 1.17 re-write cli utility with typer in python.
 
+  - [x] the Utils Class: integration of utilities with importlib to function with typer cli
+
+    - [x] command utils
+    - [x] independent utils
+
+  - [ ] `filepath` argument in `./.vinotes/vinotes/main.py`
+  - [ ] implement all pending utils
+  - [ ] try re-writing activate.sh in py too...
+
 # 2. Commands
 
 - [x] 2.1 help - `.vinotes/utils/help.py`

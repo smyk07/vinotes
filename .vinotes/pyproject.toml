@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "vinotes"
+version = "0.1.0"
+description = ""
+authors = ["smyk07 <samyak.bambole07@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+vinotes = "vinotes.main:app"
+vn = "vinotes.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = {extras = ["all"], version = "^0.12.3"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
