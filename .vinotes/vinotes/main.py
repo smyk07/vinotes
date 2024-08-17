@@ -2,6 +2,7 @@
 import sys
 import importlib
 from typing import Optional
+from typing import List
 from typing_extensions import Annotated
 import typer
 
@@ -16,12 +17,13 @@ from vinotes.help import help_check
 
 # if invalid command provided
 def invalid_command_provided():
-    print("Invalid vinotes command, or no command provided, use --help for more info")
+    print("Invalid vinotes command, use vinotes --help for more info")
 
 
 # main function
 def main(
     command: Annotated[Optional[str], typer.Argument()] = None,
+    command_args: Annotated[Optional[List[str]], typer.Argument()] = None,
     help: Annotated[Optional[bool], typer.Option()] = False,
 ):
     """
@@ -31,10 +33,14 @@ def main(
     if command is None and help:
         help_check()
     elif command is None and not help:
-        invalid_command_provided()
+        print("Welcome to vinotes, use --help for more options")
     else:
         try:
-            util = importlib.import_module(f"utils.{command}", ".").Util()
+            util = (
+                importlib.import_module(f"utils.{command}", "..").Util(command_args)
+                if command_args is not None
+                else importlib.import_module(f"utils.{command}", "..").Util()
+            )
             help_check(help=help, command=command, docstring=util.docstring)
             if util.util_type == "independent":
                 raise ModuleNotFoundError

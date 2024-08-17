@@ -6,5 +6,8 @@
 .vinotes/utils/__pycache__/
 .vinotes/vinotes/__pycache__/
 
+# poetry test dir 
+.vinotes/tests/
+
 # smyk07's testing directory
 testdir/

@@ -3,7 +3,6 @@ import sys
 import importlib
 from pathlib import Path
 
-
 # change path
 sys.path.insert(0, "..")
 
@@ -11,7 +10,7 @@ sys.path.insert(0, "..")
 # print help func
 def print_command_help(command: str, docstring: str):
     print(f"Welcome to vinotes, here is help for {command}")
-    print(f"\ncommand: {command}")
+    print(f"\nutility: {command}")
     print(f"usage: {docstring}")
 
 
@@ -33,7 +32,10 @@ def help_check(help: bool = True, docstring: str = "", command=None):
             util_files = utils_path.iterdir()
             for file in util_files:
                 if file.is_file():
-                    util_name = str(file).split("/")[-1][:-3]
+                    if not str(file).split("/")[-1][:-3].startswith("example"):
+                        util_name = str(file).split("/")[-1][:-3]
+                    else:
+                        continue
                     util = importlib.import_module(f"utils.{util_name}", ".").Util()
                     if util.util_type == "command":
                         print(f"{util_name} - {util.docstring}")
