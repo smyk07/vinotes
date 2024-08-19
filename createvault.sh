@@ -7,7 +7,7 @@ command git clone https://github.com/smyk07/vinotes.git .
 echo ""
 echo "▷ Repo Cloned"
 
-command rm -rf todo.md README.md LICENSE createvault.sh
+command rm -rf old-todo.md todo.md README.md LICENSE createvault.sh
 command git remote remove origin
 
 echo ""
