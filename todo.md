@@ -61,16 +61,15 @@
 
 - [x] 1.16 update create_note.py to have the ability to create notes in the vault directory without any principle directory.
 
-- [ ] 1.17 re-write cli utility with typer in python.
+- [x] 1.17 re-write cli utility with typer in python.
 
   - [x] the Utils Class: integration of utilities with importlib to function with typer cli
 
     - [x] command utils
     - [x] independent utils
 
-  - [ ] `filepath` argument in `./.vinotes/vinotes/main.py`
-  - [ ] implement all pending utils
-  - [ ] try re-writing activate.sh in py too...
+  - [x] `filepath` argument in `./.vinotes/vinotes/main.py`
+  - [x] implement all pending utils
 
 # 2. Commands
 
