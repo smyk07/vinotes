@@ -22,6 +22,7 @@ get_config = config_manager_util.get_config
 # write class
 class Util:
     def __init__(self, command_args=[]) -> None:
+        self.name = "create-note"
         self.docstring = """Create a note in either the root directory, or enter a filepath including a principle directory."""
         self.util_type = "command"
         self.command_args = command_args

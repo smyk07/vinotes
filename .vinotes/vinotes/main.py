@@ -30,10 +30,11 @@ def main(
     Welcome to Vinotes, an external markdown note-taking utility for Neovim or any other text editor.
     """
 
-    if command is None and help:
-        help_check()
-    elif command is None and not help:
-        print("Welcome to vinotes, use --help for more options")
+    if command is None:
+        if help:
+            help_check()
+        else:
+            print("Welcome to vinotes, use --help for more options")
     else:
         try:
             util = (
@@ -41,13 +42,17 @@ def main(
                 if command_args is not None
                 else importlib.import_module(f"utils.{command}", "..").Util()
             )
-            help_check(help=help, command=command, docstring=util.docstring)
             if util.util_type == "independent":
                 raise ModuleNotFoundError
-            else:
-                util.command()
         except ModuleNotFoundError:
             invalid_command_provided()
+            quit()
+
+        if help:
+            help_check(util)
+            quit()
+
+        util.command()
 
 
 # run the main function

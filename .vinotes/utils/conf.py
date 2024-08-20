@@ -9,6 +9,7 @@ import subprocess
 
 class Util:
     def __init__(self, command_args=None):
+        self.name = "conf"
         self.docstring = """Edit vinotes configuration inside nano."""
         self.util_type = "command"
         self.command_args = command_args

@@ -17,6 +17,7 @@ get_config = config_manager_util.get_config
 # write utility class
 class Util:
     def __init__(self, command_args=[]) -> None:
+        self.name = "open-note"
         self.docstring = """When used by itself, opens a fuzzy finder to search through all notes and opens them, when provided a filepath, open it into text editor."""
         self.util_type = "command"
         self.command_args = command_args

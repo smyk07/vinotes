@@ -9,5 +9,8 @@
 # poetry test dir 
 .vinotes/tests/
 
+# vinotes dev_utils directory 
+.vinotes/dev_utils/
+
 # smyk07's testing directory
 testdir/

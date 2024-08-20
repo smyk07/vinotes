@@ -19,6 +19,7 @@ get_config = config_manager_util().get_config
 # write class
 class Util:
     def __init__(self, command_args=None):
+        self.name = "changelog"
         self.docstring = """Open the vinotes changelog in your text editor."""
         self.util_type = "command"
         self.command_args = command_args

@@ -26,6 +26,7 @@ file = Path(f"./{daily_dir}/{date}.md")
 # write utility class
 class Util:
     def __init__(self, command_args=[]) -> None:
+        self.name = "open-daily"
         self.docstring = """creates or opens today's daily note."""
         self.util_type = "command"
         self.command_args = command_args

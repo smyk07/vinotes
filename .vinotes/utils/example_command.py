@@ -16,7 +16,10 @@ get_config = config_manager_util.get_config
 # write utility class
 class Util:
     def __init__(self, command_args=[]) -> None:
+        self.name = "command_name_goes_here"
         self.docstring = """Describe your command here..."""
+        # completely optional:
+        # self.extended_docstring = """"""
         self.util_type = "command"
         self.command_args = command_args
 
