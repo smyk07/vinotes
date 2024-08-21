@@ -4,7 +4,7 @@ import importlib
 from pathlib import Path
 
 # change path
-sys.path.insert(0, "..")
+sys.path.insert(0, "./.vinotes/")
 
 
 # print help func
