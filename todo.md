@@ -4,6 +4,6 @@ Felt like I wanted a change.
 
 - [ ] 3.1 - rewrite `update` command
 
-- [ ] 3.2 - dev mode
+- [ ] 3.2 - cross platform
 
-- [ ] 3.3 - cross platform
+- [ ] 3.3 - plugin system
