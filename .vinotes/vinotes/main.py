@@ -15,11 +15,6 @@ sys.path.insert(0, "..")
 from vinotes.help import help_check
 
 
-# if invalid command provided
-def invalid_command_provided():
-    print("Invalid vinotes command, use vinotes --help for more info")
-
-
 # main function
 def main(
     command: Annotated[Optional[str], typer.Argument()] = None,
@@ -53,6 +48,11 @@ def main(
             quit()
 
         util.command()
+
+
+# if invalid command provided
+def invalid_command_provided():
+    print("Invalid vinotes command, use vinotes --help for more info")
 
 
 # run the main function
