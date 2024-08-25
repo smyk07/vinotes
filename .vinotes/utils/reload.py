@@ -3,6 +3,7 @@
 
 # import dependencies
 from pathlib import Path
+from rich import print
 
 
 # import templates and config
@@ -48,7 +49,7 @@ class Util:
         for dir in dirs_from_config:
             if dir not in existing_templates:
                 create_template = input(
-                    f"\nTemplate for {dir} does not exist, create a simple template? (Y/n):"
+                    f"Template for [bold light_green]{dir}[/] does not exist, create a simple template? (Y/n):"
                 )
                 if create_template == "y" or create_template == "":
                     src_template = Path(".vinotes/templates/example.py")
@@ -57,15 +58,19 @@ class Util:
 
             if dir not in existing_dirs:
                 create_dir = input(
-                    f"\nPrinciple directory {dir} does not exist, create directory? (Y/n):"
+                    f"Principle directory [bold cyan]{dir}[/] does not exist, create directory? (Y/n):"
                 )
                 if create_dir == "y" or create_dir == "":
                     dir_path = Path(f"./{dir}")
                     try:
                         dir_path.mkdir(parents=False, exist_ok=True)
                     except FileNotFoundError:
-                        print("Please do not include '/' in parent directory name.")
-                        print("Update .vinotes/config.json and reload again.")
+                        print(
+                            "Please do not include [bold light_green]/[/] in parent directory name."
+                        )
+                        print(
+                            "Update [bold bright_red].vinotes/config.json[/] and reload again."
+                        )
                         quit()
 
 

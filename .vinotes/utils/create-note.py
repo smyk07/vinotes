@@ -7,6 +7,7 @@
 import sys
 import subprocess
 from pathlib import Path
+from rich import print
 
 # updating path
 sys.path.insert(0, "..")
@@ -37,8 +38,9 @@ class Util:
             file = Path(filepathstr)
         else:
             print("Please enter a path to your note")
-            print("Correct usage:")
-            print("vinotes create-note <path/to/note>")
+            print(
+                "Correct usage: [bold light_green]vinotes create-note <path/to/note>[/]"
+            )
             quit()
 
         # extract template from filepathstr
@@ -47,7 +49,9 @@ class Util:
 
         # quit if template is daily
         if template == "daily":
-            print("Please use vinotes open-daily to open today's daily note")
+            print(
+                "Please use [bold bright_red]vinotes open-daily[/] to open today's daily note"
+            )
             quit()
 
         # create file and write contents, optionally open, if exists, ask weather to open.

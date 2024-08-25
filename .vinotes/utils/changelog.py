@@ -5,6 +5,7 @@
 import sys
 from pathlib import Path
 import subprocess
+from rich import print
 
 # updating path
 sys.path.insert(0, "..")
@@ -33,7 +34,7 @@ class Util:
                 executable=f"{get_config('shell_executable')}",
             )
         else:
-            print("\nFile CHANGELOG.md not found...")
+            print("\nFile [bold bright_red]CHANGELOG.md[/] not found...")
 
 
 # test the util if run as main
