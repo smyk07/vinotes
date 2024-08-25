@@ -12,10 +12,6 @@ echo "▷ Deleting temporary folder..."
 echo ""
 command rm -rf ./vinotes_temp
 
-echo "▷ Removing Vinotes git remote..."
-echo ""
-command git remote remove origin
-
 echo "▷ Initial Setup Done ✔"
 
 echo ""
