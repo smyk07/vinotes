@@ -5,6 +5,7 @@ from typing import Optional
 from typing import List
 from typing_extensions import Annotated
 import typer
+from rich import print
 
 
 # changing path
@@ -29,7 +30,9 @@ def main(
         if help:
             help_check()
         else:
-            print("Welcome to vinotes, use --help for more options")
+            print(
+                "Welcome to [light_green]vinotes[/], use [bold bright_red]--help[/] for more options"
+            )
     else:
         try:
             util = (
@@ -52,7 +55,9 @@ def main(
 
 # if invalid command provided
 def invalid_command_provided():
-    print("Invalid vinotes command, use vinotes --help for more info")
+    print(
+        "Invalid vinotes command, use [bold bright_red]vinotes --help[/] for more info"
+    )
 
 
 # run the main function

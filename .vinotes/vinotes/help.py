@@ -2,30 +2,24 @@
 import sys
 import importlib
 from pathlib import Path
+from rich import print
 
 # change path
 sys.path.insert(0, "./.vinotes/")
 
 
-# print help func
-def print_command_help(command: str, extended_docstring: str):
-    print(f"Welcome to vinotes, here is help for {command}")
-    print(f"\nutility: {command}")
-    print(f"usage: {extended_docstring}")
-
-
 # help_check function
 def help_check(util=None):
     if util:
-        print(f"command - {util.name}")
+        print(f"[bold light_green]command[/] - {util.name}")
         if hasattr(util, "extended_docstring"):
-            print(f"usage: {util.extended_docstring}")
+            print(f"[bold cyan]usage[/]: {util.extended_docstring}")
         else:
-            print(f"usage: {util.docstring}")
+            print(f"[bold cyan]usage[/]: {util.docstring}")
     else:
         print("Welcome to vinotes help,\n")
-        print("--help - Print this help document")
-        print("<command> --help - extended help for any command")
+        print("[bold bright_red]--help[/] - Print this help document.")
+        print("[bold bright_red]<command> --help[/] - extended help for any command.\n")
 
         util_files = [f for f in Path(".vinotes/utils/").iterdir() if f.is_file()]
 
@@ -38,4 +32,4 @@ def help_check(util=None):
             util = importlib.import_module(f"utils.{util_name}").Util()
 
             if util.util_type == "command":
-                print(f"{util_name} - {util.docstring}")
+                print(f"[bold light_green]{util_name}[/] - {util.docstring}")
