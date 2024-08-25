@@ -26,16 +26,22 @@ class Util:
             raise Exception(f"cannot find config field {key}")
 
     @staticmethod
-    def get_dev_config(key: str):
-        with open("./dev.config.json", "r") as data:
-            dev_config = json.load(data)
+    def get_plugins():
+        with open(".vinotes/plugins.json", "r") as data:
+            return json.load(data)
+
+    @staticmethod
+    def get_plugin_config(key: str):
+        with open(".vinotes/plugins.json", "r") as data:
+            plugins = json.load(data)
         try:
-            return dev_config[key]
+            return plugins[key]
         except KeyError:
-            raise Exception(f"cannot find dev config field {key}")
+            raise Exception(f"cannot find plugin {key} in plugins.json")
 
 
 # test the util if run as main
 if __name__ == "__main__":
     test_util = Util()
-    test_util.get_config("vim_command")
+    print(test_util.get_config("vim_command"))
+    print(test_util.get_plugin_config())
