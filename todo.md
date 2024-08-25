@@ -6,4 +6,4 @@ Felt like I wanted a change.
 
 - [ ] 3.2 - cross platform
 
-- [ ] 3.3 - plugin system
+- [x] 3.3 - plugin system
