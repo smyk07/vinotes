@@ -14,7 +14,7 @@ For more in-depth documentation and on customizations, refer to the [Wiki](https
 
 ## Default Features
 
-Vinotes comes with a simple note-taking system which includes:
+Vinotes's default config comes with a simple note-taking system which includes:
 
 - Zettelkasten System for:
   - Fleeting Notes
@@ -22,9 +22,11 @@ Vinotes comes with a simple note-taking system which includes:
   - Permanent Notes
 - Daily notes
 
+You may either edit the `principle_dirs` field in the config to customize vinotes according to your liking, or use the default config and try Vinotes out for the first time.
+
 ## Requirements
 
-- Linux
+- Linux (cross-platform support coming soon)
 - Git
 - python3
 - fzf
@@ -35,5 +37,5 @@ Vinotes comes with a simple note-taking system which includes:
 Follow the below steps:
 
 1. Create an issue for a feature.
-2. Fork the repo, add describe the feature in `todo.md`.
+2. Fork the repo, describe the feature in `todo.md`.
 3. After the feature is properly implemented, create a pull request.

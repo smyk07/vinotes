@@ -6,6 +6,11 @@
 # import dependencies
 import subprocess
 
+# get config
+from utils.config_manager import Util as config_manager_util
+
+get_config = config_manager_util.get_config
+
 
 class Util:
     def __init__(self, command_args=None):
@@ -15,7 +20,11 @@ class Util:
         self.command_args = command_args
 
     def command(self):
-        subprocess.run("nano .vinotes/config.json", shell=True, executable="/bin/bash")
+        subprocess.run(
+            "nano .vinotes/config.json",
+            shell=True,
+            executable=get_config("shell_executable"),
+        )
 
 
 # test the util if run as main

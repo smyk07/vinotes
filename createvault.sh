@@ -1,16 +1,21 @@
 #!/bin/bash
 
-echo "▷ Cloning repo..."
+echo "▷ Cloning Vinotes github repo into ./vinotes_temp ..."
 echo ""
-command git clone https://github.com/smyk07/vinotes.git .
+command git clone https://github.com/smyk07/vinotes.git vinotes_temp
 
+echo "▷ Copying files..."
 echo ""
-echo "▷ Repo Cloned"
+command cp -r ./vinotes_temp/.vinotes ./
 
-command rm -rf old-todo.md todo.md README.md LICENSE createvault.sh
+echo "▷ Deleting temporary folder..."
+echo ""
+command rm -rf ./vinotes_temp
+
+echo "▷ Removing Vinotes git remote..."
+echo ""
 command git remote remove origin
 
-echo ""
 echo "▷ Initial Setup Done ✔"
 
 echo ""
@@ -25,7 +30,7 @@ echo ""
 echo "▷ After editing config.json, make sure to reload the vault using:"
 echo "    vn reload"
 echo ""
-echo "▷ This default vault comes with a Zettlekasten note-taking system and a daily-note creation feature."
+echo "▷ This default config comes with a Zettlekasten note-taking system and a daily-note creation feature, you can either edit the setup according to your needs, or keep it and try Vinotes out."
 echo ""
 echo "▷ Visit the kickstart wiki page for more information."
 echo ""
