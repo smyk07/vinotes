@@ -33,12 +33,10 @@ class Util:
         #     for every util within plugin
         #         if exists, check for update, if available, update, else pass
         #         if does not exist, install, else pass
-        #
+        updated_count = 0
+        created_count = 0
 
         for plugin, data in plugins_from_config.items():
-            updated_count = 0
-            created_count = 0
-
             for util in data["utils"]:
                 if Path(f"./.vinotes/utils/{util}.py").is_file():
                     try:
@@ -72,9 +70,9 @@ class Util:
                         created_count += 1
                         print(f"[cyan]{util}[/] - utility created")
 
-            print(
-                f"\n[light_green]Plugins Checked[/light_green] - {created_count} created, {updated_count} updated."
-            )
+        print(
+            f"\n[light_green]Plugins Checked[/light_green] - {created_count} created, {updated_count} updated."
+        )
 
 
 # write helper functions here (delete the code below obv)
