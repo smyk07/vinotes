@@ -9,3 +9,5 @@
 
 - Files can now be created alongside the other principle directories, without needing a principle directories in the root directory of the vault (root template).
 - Added 3rd-party plugins feature.
+  - new command - `vn check-plugins`
+- new command = `cn check-utils` for updating default utilities.
