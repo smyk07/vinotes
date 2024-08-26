@@ -36,18 +36,12 @@ class Util:
         updated_count = 0
         created_count = 0
 
-        for plugin, data in plugins_from_config.items():
-            for util in data["utils"]:
+        for plugin_data in plugins_from_config:
+            for util in plugin_data["utils"]:
                 if Path(f"./.vinotes/utils/{util}.py").is_file():
-                    try:
-                        with urllib.request.urlopen(
-                            get_raw_url(plugin=data["plugin"], filename=f"{util}.py")
-                        ) as response:
-                            remote_file_content = response.read().decode("utf-8")
-                    except urllib.error.HTTPError as err:
-                        print(f"\n{util} has some errors: {err.code} {err.reason}")
-                        quit()
-
+                    remote_file_content = get_util_content_from_plugin(
+                        plugin=plugin_data["plugin"], filename=f"{util}.py"
+                    )
                     util_path = Path(f"./.vinotes/utils/{util}.py")
 
                     if util_path.read_text() != remote_file_content:
@@ -56,14 +50,9 @@ class Util:
                             updated_count += 1
                             print(f"[cyan]{util}[/] - utility updated")
                 else:
-                    try:
-                        with urllib.request.urlopen(
-                            get_raw_url(plugin=data["plugin"], filename=f"{util}.py")
-                        ) as response:
-                            remote_file_content = response.read().decode("utf-8")
-                    except urllib.error.HTTPError as err:
-                        print(f"\n{util} has some errors: {err.code} {err.reason}")
-                        quit()
+                    remote_file_content = get_util_content_from_plugin(
+                        plugin=plugin_data["plugin"], filename=f"{util}.py"
+                    )
 
                     with Path(f"./.vinotes/utils/{util}.py").open("w") as script:
                         script.write(remote_file_content)
@@ -80,6 +69,22 @@ def get_raw_url(plugin: str, filename: str, branch: str = "main"):
     return f"https://raw.githubusercontent.com/{plugin}/{branch}/{filename}"
 
 
+def get_util_content_from_plugin(plugin: str, filename: str, branch: str = "main"):
+    try:
+        with urllib.request.urlopen(
+            f"https://raw.githubusercontent.com/{plugin}/{branch}/{filename}"
+        ) as response:
+            return response.read().decode("utf-8")
+    except urllib.error.HTTPError as err:
+        print(f"Errors while fetching plugin util file: {err.code} {err.reason}")
+        quit()
+
+
 # test file if run as main.
 if __name__ == "__main__":
+    print(
+        get_util_content_from_plugin(
+            plugin="smyk07/vinotes-demo-plugin", filename="vinotes-demo-plugin.py"
+        )
+    )
     pass  # testing code goes here.
