@@ -1,17 +1,20 @@
 # purpose: checks, installs, and updates vinotes 3rd-party plugins.
-# command: describe the command
+# command: vn check-plugins
 
 # import dependencies
 from pathlib import Path
 import urllib.request
 import urllib.error
 from rich import print
+import json
+import base64
 
 
 # import templates and config
 from utils.config_manager import Util as config_manager_util
 
 get_config = config_manager_util.get_config
+dump_plugin_config = config_manager_util.dump_plugin_config
 plugins_from_config = config_manager_util.get_plugins()
 
 
@@ -36,11 +39,11 @@ class Util:
         updated_count = 0
         created_count = 0
 
-        for plugin_data in plugins_from_config:
+        for plugin, plugin_data in plugins_from_config.items():
             for util in plugin_data["utils"]:
                 if Path(f"./.vinotes/utils/{util}.py").is_file():
-                    remote_file_content = get_util_content_from_plugin(
-                        plugin=plugin_data["plugin"], filename=f"{util}.py"
+                    remote_file_content = get_remote_plugin_file(
+                        plugin=plugin, filename=f"{util}.py"
                     )
                     util_path = Path(f"./.vinotes/utils/{util}.py")
 
@@ -50,8 +53,8 @@ class Util:
                             updated_count += 1
                             print(f"[cyan]{util}[/] - utility updated")
                 else:
-                    remote_file_content = get_util_content_from_plugin(
-                        plugin=plugin_data["plugin"], filename=f"{util}.py"
+                    remote_file_content = get_remote_plugin_file(
+                        plugin=plugin, filename=f"{util}.py"
                     )
 
                     with Path(f"./.vinotes/utils/{util}.py").open("w") as script:
@@ -64,26 +67,26 @@ class Util:
         )
 
 
-# write helper functions here (delete the code below obv)
-def get_raw_url(plugin: str, filename: str, branch: str = "main"):
-    return f"https://raw.githubusercontent.com/{plugin}/{branch}/{filename}"
-
-
-def get_util_content_from_plugin(plugin: str, filename: str, branch: str = "main"):
+# function to get code from remote
+def get_remote_plugin_file(plugin: str, filename: str, branch: str = "main"):
     try:
         with urllib.request.urlopen(
-            f"https://raw.githubusercontent.com/{plugin}/{branch}/{filename}"
+            f"https://api.github.com/repos/{plugin}/contents/{filename}?ref={branch}"
         ) as response:
-            return response.read().decode("utf-8")
+            file_json_data = json.loads(response.read().decode("utf-8"))
     except urllib.error.HTTPError as err:
-        print(f"Errors while fetching plugin util file: {err.code} {err.reason}")
+        print(
+            f"Errors while fetching file {filename} from {plugin}: {err.code} {err.reason}"
+        )
         quit()
+
+    return base64.b64decode(file_json_data["content"]).decode("utf-8")
 
 
 # test file if run as main.
 if __name__ == "__main__":
     print(
-        get_util_content_from_plugin(
+        get_remote_plugin_file(
             plugin="smyk07/vinotes-demo-plugin", filename="vinotes-demo-plugin.py"
         )
     )

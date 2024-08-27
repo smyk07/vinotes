@@ -13,7 +13,6 @@ Felt like I wanted a change.
   - [ ] export individual pages to HTML or PDF
   - [ ] export whole vault to HTML or hugo
 
-- [ ] 3.5 - improvements in `vn check-plugins`
-  - [ ] use github api rather than github raw
-  - [ ] allow auto-install of opts, utils, etc... when only the `plugin` field is provided in plugins config.
+- [x] 3.5 - improvements in `vn check-plugins`
+  - [x] use github api rather than github raw
   - [x] `vn plug` - `open plugins.json` in default editor.

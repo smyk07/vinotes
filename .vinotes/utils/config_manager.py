@@ -44,4 +44,4 @@ class Util:
 if __name__ == "__main__":
     test_util = Util()
     print(test_util.get_config("vim_command"))
-    print(test_util.get_plugin_config())
+    print(test_util.get_plugin_config("vinotes-demo-plugin"))
