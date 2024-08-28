@@ -14,7 +14,6 @@ import base64
 from utils.config_manager import Util as config_manager_util
 
 get_config = config_manager_util.get_config
-dump_plugin_config = config_manager_util.dump_plugin_config
 plugins_from_config = config_manager_util.get_plugins()
 
 
