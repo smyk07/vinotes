@@ -1,6 +1,6 @@
 {
   "smyk07/vinotes-demo-plugin": {
-    "utils": ["vinotes-demo-plugin"],
+    "utils": ["vinotes-demo-plugin", "vinotes_demo_time_provider"],
     "opts": {
       "message": "Hello Vinotes! This is a message from the plugins config."
     }
