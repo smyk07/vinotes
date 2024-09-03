@@ -18,6 +18,6 @@ Felt like I wanted a change.
   - [x] use github api rather than github raw
   - [x] `vn plug` - `open plugins.json` in default editor.
 
-- [ ] 3.6 - revamp create vault process
-  - [ ] use github api to do so
-  - [ ] create two seperate scripts: one for main branch and one for dev branch
+- [x] 3.6 - revamp create vault process
+  - [x] use github api to do so
+  - [x] create two seperate scripts: one for main branch and one for dev branch

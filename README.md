@@ -7,7 +7,7 @@ The motivation for me to create this project was for me to take notes in Neovim 
 Refer to [Kickstart](https://github.com/smyk07/vinotes/wiki/1.-Kickstart) to get started, or run this command in your corrent (empty) directory:
 
 ```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/smyk07/vinotes/main/createvault.sh)"
+python3 -c "$(curl -fsSL https://raw.githubusercontent.com/smyk07/vinotes/main/create-vault.py)"
 ```
 
 For more in-depth documentation and on customizations, refer to the [Wiki](https://github.com/smyk07/vinotes/wiki).
