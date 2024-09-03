@@ -14,5 +14,10 @@ Felt like I wanted a change.
   - [ ] export whole vault to HTML or hugo
 
 - [x] 3.5 - improvements in `vn check-plugins`
+
   - [x] use github api rather than github raw
   - [x] `vn plug` - `open plugins.json` in default editor.
+
+- [ ] 3.6 - revamp create vault process
+  - [ ] use github api to do so
+  - [ ] create two seperate scripts: one for main branch and one for dev branch
