@@ -1,4 +1,5 @@
 # import dependencies
+from pathlib import Path
 import sys
 import importlib
 from typing import Optional
@@ -25,6 +26,12 @@ def main(
     """
     Welcome to Vinotes, an external markdown note-taking utility for Neovim or any other text editor.
     """
+
+    if not Path(".vinotes").is_dir():
+        print(
+            "[bold bright_red]A[/] [light_green].vinotes[/] [bold bright_red]directory is not present in this working directory.[/] \n[light_green]Please cd to the root of your Vinotes vault.[/]"
+        )
+        quit()
 
     if command is None:
         if help:
