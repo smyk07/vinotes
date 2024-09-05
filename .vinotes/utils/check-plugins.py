@@ -67,7 +67,7 @@ class Util:
 
 
 # function to get code from remote
-def get_remote_plugin_file(plugin: str, filename: str, branch: str = "main"):
+def get_remote_plugin_file(plugin: str, filename: str, branch: str = "main") -> str:
     try:
         with urllib.request.urlopen(
             f"https://api.github.com/repos/{plugin}/contents/{filename}?ref={branch}"
