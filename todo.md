@@ -21,3 +21,4 @@ Felt like I wanted a change.
 - [x] 3.6 - revamp create vault process
   - [x] use github api to do so
   - [x] create two seperate scripts: one for main branch and one for dev branch
+  - [x] build package after copy
